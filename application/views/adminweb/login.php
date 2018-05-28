@@ -5,7 +5,7 @@
 <!-- BEGIN HEAD -->
 <head>
     <meta charset="utf-8" />
-    <title>Adriano | Login Options</title>
+    <title>Dg. Shop | Login Options</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <meta content="" name="description" />
     <meta content="" name="author" />
@@ -85,7 +85,7 @@
     <!-- END LOGIN -->
     <!-- BEGIN COPYRIGHT -->
     <div class="copyright">
-        2014 &copy; Adriano MX Shop - Admin Dashboard.
+        2018 &copy; Dg. Shop (Desain Grafis Shop) - Admin Dashboard.
     </div>
    
 </body>

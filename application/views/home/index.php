@@ -176,7 +176,7 @@
 								if ($value['id_slider']==$t) { ?>
 								<div class="item active">
 									<div class="col-sm-6">
-										<h1><span>Adriano MX</span>-Shop</h1>
+										<h1><span>Dg.</span>-Shop</h1>
 										<h2><?php echo $value['tittle'];?></h2>
 										<p><?php echo strip_tags(substr($value['description'],0,200));?></p>
 										<a href="<?php echo base_url();?>home/detail_slider/<?php echo $value['id_slider'];?>" class="btn btn-default get"> Read More</a>
@@ -192,7 +192,7 @@
 								else { ?>
 								<div class="item">
 									<div class="col-sm-6">
-										<h1><span>Adriano MX</span>-Shop</h1>
+										<h1><span>Dg.</span>-Shop</h1>
 										<h2><?php echo $value['tittle'];?></h2>
 										<p><?php echo strip_tags(substr($value['description'],0,200));?></p>
 										<a href="<?php echo base_url();?>home/detail_slider/<?php echo $value['id_slider'];?>" class="btn btn-default get"> Read More</a>
@@ -417,7 +417,8 @@
 				<div class="row">
 					<div class="col-sm-2">
 						<div class="companyinfo">
-							<h2><span>Adriano MX</span>-Shop</h2>
+							<h2><span>Dg.</span>-Shop</h2>
+							<h4>Desain Grafis Shop</h4>
 							<!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,sed do eiusmod tempor</p> -->
 						</div>
 					</div>
@@ -459,7 +460,7 @@
 		<div class="footer-bottom">
 			<div class="container">
 				<div class="row">
-					<p class="pull-left">Copyright © 2014 Adriano MX Online Shop. All rights reserved.</p>
+					<p class="pull-left">Copyright © 2018 Dg. Shop (Desain Grafis Shop). All rights reserved.</p>
 					
 				</div>
 			</div>

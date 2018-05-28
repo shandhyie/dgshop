@@ -190,7 +190,7 @@
 	    			<div class="contact-info">
 	    				<h2 class="title text-center">Kontak Kami</h2>
 	    				<address>
-	    					<p>Adriano MX-Shop</p>
+	    					<p>Dg.Shop (Desain Grafis Shop)</p>
 							<p><?php echo $alamat;?></p>
 							<p>Mobile: <?php echo $phone;?></p>
 							<p>Email: <?php echo $email;?></p>
@@ -222,7 +222,8 @@
 				<div class="row">
 					<div class="col-sm-2">
 						<div class="companyinfo">
-							<h2><span>Adriano MX</span>-Shop</h2>
+							<h2><span>Dg.</span>Shop</h2>
+							<h4>Desain Grafis Shop</h4>
 							<!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,sed do eiusmod tempor</p> -->
 						</div>
 					</div>
@@ -264,7 +265,7 @@
 		<div class="footer-bottom">
 			<div class="container">
 				<div class="row">
-					<p class="pull-left">Copyright © 2014 Adriano MX Online Shop. All rights reserved.</p>
+					<p class="pull-left">Copyright © 2018 Dg. Shop (Desain Grafis Shop). All rights reserved.</p>
 					
 				</div>
 			</div>
