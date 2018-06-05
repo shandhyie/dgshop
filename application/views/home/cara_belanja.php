@@ -172,7 +172,7 @@
 						</div><!--/category-products-->
 					
 						<div class="brands_products"><!--brands_products-->
-							<h2>Brands</h2>
+							<h2>Desainer</h2>
 							<div class="brands-name">
 								<ul class="nav nav-pills nav-stacked">
 									<?php
