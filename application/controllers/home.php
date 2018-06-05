@@ -421,24 +421,14 @@ $isi_psn = '<tr><td>'.$items["id"].'</td><td>'.$items["name"].'</td><td>Rp.'.$th
 ';
 					$isi_psn ='</table><br>';
 					$isi_psn ='Harga di atas belum termasuk biaya kirim. Kami akan mengirimkan total yang harus anda bayar ke email anda dalam jangka waktu 1x24 jam.<br>';
-<<<<<<< HEAD
-					$isi_psn ='Salam, Dg. Shop';
-=======
-					$isi_psn ='Salam, Dg.Shop';
->>>>>>> ee6e8ef3fee482c43785014af0a93aa0162d61a6
 
+					$isi_psn ='Salam, Dg.Shop';
 
 					$this->load->library('email');
 					$this->email->set_mailtype('html');
-<<<<<<< HEAD
 					$this->email->from("dgshop@gmail.com", "Admin Dg. Shop");
 					$this->email->to($email);
 					$this->email->subject('Detail Pesanan/Beli Dg. Shop');
-=======
-					$this->email->from("dgshop@gmail.com", "Admin Salam, Dg.Shop");
-					$this->email->to($email);
-					$this->email->subject('Detail Pesanan/Belanja Salam, Dg.Shop');
->>>>>>> ee6e8ef3fee482c43785014af0a93aa0162d61a6
 					$this->email->message($isi_psn);
 					$this->email->send();
 

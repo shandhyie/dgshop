@@ -234,14 +234,14 @@
 										<div class="productinfo text-center">
 											<img src="<?php echo base_url();?>images/produk/<?php echo $value['gambar'];?>" alt="" />
 											<h2><?php echo $value['harga'];?></h2>
-											<p><?php echo $value['nama_brand'];?></p>
+											<p><?php echo $value['kode_produk'];?></p>
 											<p><?php echo $value['nama_produk'];?></p>
 											<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
 										</div>
 										<div class="product-overlay">
 											<div class="overlay-content">
 												<h2><?php echo $value['harga'];?></h2>
-												<p><?php echo $value['nama_brand'];?></p>
+												<p><?php echo $value['kode_produk'];?></p>
 												<p><?php echo $value['nama_produk'];?></p>
 												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
 											</div>

@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.2.11
+-- version 4.5.1
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: May 28, 2018 at 07:20 AM
--- Server version: 5.6.21
--- PHP Version: 5.6.3
+-- Generation Time: Jun 05, 2018 at 04:53 PM
+-- Server version: 10.1.13-MariaDB
+-- PHP Version: 5.6.20
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -14,7 +14,7 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
+/*!40101 SET NAMES utf8mb4 */;
 
 --
 -- Database: `dgshop`
@@ -26,15 +26,15 @@ SET time_zone = "+00:00";
 -- Table structure for table `tbl_admin`
 --
 
-CREATE TABLE IF NOT EXISTS `tbl_admin` (
-`id_admin` int(11) NOT NULL,
+CREATE TABLE `tbl_admin` (
+  `id_admin` int(11) NOT NULL,
   `nama_admin` varchar(100) NOT NULL,
   `username` varchar(100) NOT NULL,
   `password` varchar(100) NOT NULL,
   `email` varchar(100) NOT NULL,
   `phone` bigint(15) NOT NULL,
   `hak_akses` varchar(20) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tbl_admin`
@@ -52,23 +52,23 @@ INSERT INTO `tbl_admin` (`id_admin`, `nama_admin`, `username`, `password`, `emai
 -- Table structure for table `tbl_bank`
 --
 
-CREATE TABLE IF NOT EXISTS `tbl_bank` (
-`id_bank` int(11) NOT NULL,
+CREATE TABLE `tbl_bank` (
+  `id_bank` int(11) NOT NULL,
   `nama_bank` varchar(100) NOT NULL,
   `nama_pemilik` varchar(250) NOT NULL,
   `no_rekening` varchar(50) NOT NULL,
   `gambar` varchar(200) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tbl_bank`
 --
 
 INSERT INTO `tbl_bank` (`id_bank`, `nama_bank`, `nama_pemilik`, `no_rekening`, `gambar`) VALUES
-(1, 'BCA', 'Adriano', '12342456', 'aa9d3ec4243250956a314578ff477f1b.png'),
-(2, 'Mandiri', 'Adriano', '543643512', 'ef548aea6b56db9a723f9c7ac91d46da.png'),
-(3, 'BRI', 'Adriano', '1356787', '778473b7e82f9e47ba2c284eb60a6dfb.png'),
-(4, 'Mandiri Syariah', 'Adriano', '35323264642623', 'b8a5a05025b265f80b85ec7f2494e367.png');
+(1, 'BCA', 'Rafsanjani Lestari Negara', '12342456', 'aa9d3ec4243250956a314578ff477f1b.png'),
+(2, 'Mandiri', 'Akhmad Zhaqin Hirman', '543643512', 'ef548aea6b56db9a723f9c7ac91d46da.png'),
+(3, 'BRI', 'Yori Putra Pradana', '1356787', '778473b7e82f9e47ba2c284eb60a6dfb.png'),
+(4, 'Mandiri Syariah', 'Ahmad Sandi', '35323264642623', 'b8a5a05025b265f80b85ec7f2494e367.png');
 
 -- --------------------------------------------------------
 
@@ -76,22 +76,22 @@ INSERT INTO `tbl_bank` (`id_bank`, `nama_bank`, `nama_pemilik`, `no_rekening`, `
 -- Table structure for table `tbl_brand`
 --
 
-CREATE TABLE IF NOT EXISTS `tbl_brand` (
-`id_brand` int(11) NOT NULL,
+CREATE TABLE `tbl_brand` (
+  `id_brand` int(11) NOT NULL,
   `nama_brand` varchar(100) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tbl_brand`
 --
 
 INSERT INTO `tbl_brand` (`id_brand`, `nama_brand`) VALUES
-(1, 'Brand Satu'),
-(2, 'Brand Dua'),
-(3, 'Brand Tiga'),
-(4, 'Brand Empat'),
-(5, 'Brand Lima'),
-(6, 'Brand Enam');
+(1, 'Ivan Rivaldy M'),
+(2, 'Muh. Jaka Saputra'),
+(3, 'Danton Sihombing'),
+(4, 'Bayu Santosa'),
+(5, 'Meisal Subkhan'),
+(6, 'Gilang Bogy');
 
 -- --------------------------------------------------------
 
@@ -99,11 +99,11 @@ INSERT INTO `tbl_brand` (`id_brand`, `nama_brand`) VALUES
 -- Table structure for table `tbl_carabelanja`
 --
 
-CREATE TABLE IF NOT EXISTS `tbl_carabelanja` (
-`id_carabelanja` int(11) NOT NULL,
+CREATE TABLE `tbl_carabelanja` (
+  `id_carabelanja` int(11) NOT NULL,
   `judul` varchar(100) NOT NULL,
   `deskripsi` text NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tbl_carabelanja`
@@ -118,12 +118,12 @@ INSERT INTO `tbl_carabelanja` (`id_carabelanja`, `judul`, `deskripsi`) VALUES
 -- Table structure for table `tbl_galeri`
 --
 
-CREATE TABLE IF NOT EXISTS `tbl_galeri` (
-`id_galeri` int(11) NOT NULL,
+CREATE TABLE `tbl_galeri` (
+  `id_galeri` int(11) NOT NULL,
   `nama_galeri` varchar(200) NOT NULL,
   `gambar` varchar(200) NOT NULL,
   `kategorigaleri_id` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tbl_galeri`
@@ -138,8 +138,8 @@ INSERT INTO `tbl_galeri` (`id_galeri`, `nama_galeri`, `gambar`, `kategorigaleri_
 -- Table structure for table `tbl_hubungikami`
 --
 
-CREATE TABLE IF NOT EXISTS `tbl_hubungikami` (
-`id_hubungikami` int(11) NOT NULL,
+CREATE TABLE `tbl_hubungikami` (
+  `id_hubungikami` int(11) NOT NULL,
   `nama` varchar(100) NOT NULL,
   `email` varchar(100) NOT NULL,
   `hp` bigint(15) NOT NULL,
@@ -147,7 +147,7 @@ CREATE TABLE IF NOT EXISTS `tbl_hubungikami` (
   `pesan` text NOT NULL,
   `tanggal` date NOT NULL,
   `status` int(2) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tbl_hubungikami`
@@ -162,12 +162,12 @@ INSERT INTO `tbl_hubungikami` (`id_hubungikami`, `nama`, `email`, `hp`, `alamat`
 -- Table structure for table `tbl_hubungi_kami_kirim`
 --
 
-CREATE TABLE IF NOT EXISTS `tbl_hubungi_kami_kirim` (
-`id_hubungi_kami_kirim` int(11) NOT NULL,
+CREATE TABLE `tbl_hubungi_kami_kirim` (
+  `id_hubungi_kami_kirim` int(11) NOT NULL,
   `kepada` varchar(50) NOT NULL,
   `judul` varchar(50) NOT NULL,
   `isi_hubungi_kami_kirim` text NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tbl_hubungi_kami_kirim`
@@ -184,11 +184,11 @@ INSERT INTO `tbl_hubungi_kami_kirim` (`id_hubungi_kami_kirim`, `kepada`, `judul`
 -- Table structure for table `tbl_jasapengiriman`
 --
 
-CREATE TABLE IF NOT EXISTS `tbl_jasapengiriman` (
-`id_jasapengiriman` int(11) NOT NULL,
+CREATE TABLE `tbl_jasapengiriman` (
+  `id_jasapengiriman` int(11) NOT NULL,
   `nama` varchar(250) NOT NULL,
   `gambar` varchar(200) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tbl_jasapengiriman`
@@ -205,25 +205,25 @@ INSERT INTO `tbl_jasapengiriman` (`id_jasapengiriman`, `nama`, `gambar`) VALUES
 -- Table structure for table `tbl_kategori`
 --
 
-CREATE TABLE IF NOT EXISTS `tbl_kategori` (
-`id_kategori` int(11) NOT NULL,
+CREATE TABLE `tbl_kategori` (
+  `id_kategori` int(11) NOT NULL,
   `nama_kategori` varchar(50) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tbl_kategori`
 --
 
 INSERT INTO `tbl_kategori` (`id_kategori`, `nama_kategori`) VALUES
-(1, 'Sepatu'),
-(2, 'Sarung Tangan'),
-(3, 'Motorcros'),
-(4, 'Kacamata'),
-(5, 'Jersey'),
-(6, 'Helm'),
-(7, 'Dewasa'),
-(8, 'Celana'),
-(9, 'Anak-anak');
+(1, 'Poster'),
+(2, 'Baju'),
+(3, 'Undangan'),
+(4, 'Kartu Nama'),
+(5, 'Kalender'),
+(6, 'Spanduk'),
+(7, 'Kemasan'),
+(8, 'Logo'),
+(9, 'Browsur');
 
 -- --------------------------------------------------------
 
@@ -231,10 +231,10 @@ INSERT INTO `tbl_kategori` (`id_kategori`, `nama_kategori`) VALUES
 -- Table structure for table `tbl_kategorigaleri`
 --
 
-CREATE TABLE IF NOT EXISTS `tbl_kategorigaleri` (
-`id_kategorigaleri` int(11) NOT NULL,
+CREATE TABLE `tbl_kategorigaleri` (
+  `id_kategorigaleri` int(11) NOT NULL,
   `nama_kategorigaleri` varchar(100) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tbl_kategorigaleri`
@@ -250,12 +250,12 @@ INSERT INTO `tbl_kategorigaleri` (`id_kategorigaleri`, `nama_kategorigaleri`) VA
 -- Table structure for table `tbl_kontak`
 --
 
-CREATE TABLE IF NOT EXISTS `tbl_kontak` (
-`id_kontak` int(11) NOT NULL,
+CREATE TABLE `tbl_kontak` (
+  `id_kontak` int(11) NOT NULL,
   `alamat` varchar(250) NOT NULL,
   `phone` bigint(15) NOT NULL,
   `email` varchar(100) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tbl_kontak`
@@ -270,10 +270,10 @@ INSERT INTO `tbl_kontak` (`id_kontak`, `alamat`, `phone`, `email`) VALUES
 -- Table structure for table `tbl_kota`
 --
 
-CREATE TABLE IF NOT EXISTS `tbl_kota` (
-`id_kota` int(11) NOT NULL,
+CREATE TABLE `tbl_kota` (
+  `id_kota` int(11) NOT NULL,
   `nama_kota` varchar(100) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tbl_kota`
@@ -294,10 +294,10 @@ INSERT INTO `tbl_kota` (`id_kota`, `nama_kota`) VALUES
 -- Table structure for table `tbl_logo`
 --
 
-CREATE TABLE IF NOT EXISTS `tbl_logo` (
-`id_logo` int(11) NOT NULL,
+CREATE TABLE `tbl_logo` (
+  `id_logo` int(11) NOT NULL,
   `gambar` varchar(200) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tbl_logo`
@@ -312,30 +312,55 @@ INSERT INTO `tbl_logo` (`id_logo`, `gambar`) VALUES
 -- Table structure for table `tbl_produk`
 --
 
-CREATE TABLE IF NOT EXISTS `tbl_produk` (
-`id_produk` int(11) NOT NULL,
+CREATE TABLE `tbl_produk` (
+  `id_produk` int(11) NOT NULL,
   `kode_produk` varchar(20) NOT NULL,
   `nama_produk` varchar(100) NOT NULL,
   `harga` bigint(15) NOT NULL,
-  `stok` int(11) NOT NULL,
   `deskripsi` text NOT NULL,
   `gambar` varchar(200) NOT NULL,
   `kategori_id` int(11) NOT NULL,
   `brand_id` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tbl_produk`
 --
 
-INSERT INTO `tbl_produk` (`id_produk`, `kode_produk`, `nama_produk`, `harga`, `stok`, `deskripsi`, `gambar`, `kategori_id`, `brand_id`) VALUES
-(1, 'AMX00001', 'Easy Polo Black Edition', 56000, 10, 'Lorem Ipsum Doler', '11c226c3c77b62dccaa471601fe8a26e.jpg', 3, 1),
-(2, 'AMX00002', 'Easy Polo Black Edition', 56000, 20, 'Lorem Ipsum doller', 'f5b09c1b010be586adf31ce8b1206392.jpg', 4, 2),
-(3, 'AMX00003', 'Produk Ketiga', 56000, 2, 'Lorem Ipsum Doler', '919d2d896c3cb9e376b150cb0c938f43.jpg', 5, 3),
-(4, 'AMX00004', 'Easy Polo Black Edition', 56000, 10, 'Lorem Ipsum Doller', '36a1b6cfca6908d94e4f860cd16870fc.jpg', 9, 4),
-(5, 'AMX00005', 'Easy Polo Black Edition', 36000, 1, 'Lorem Ipsum Doller', '043c68c05a1635d36ab1033f862d71e6.jpg', 9, 5),
-(6, 'AMX00006', 'Easy Polo Black Edition', 26000, 10, 'Lorem Ipsum doller', '1e4afb3f73034c618a7e0391aa9b0d1a.jpg', 9, 6),
-(7, 'AMX00007', 'Easy Polo Black Edition', 16000, 5, 'Lorem Ipsum Doler', 'd4f7655973e9e358ce3d7d0301039867.jpg', 9, 6);
+INSERT INTO `tbl_produk` (`id_produk`, `kode_produk`, `nama_produk`, `harga`, `deskripsi`, `gambar`, `kategori_id`, `brand_id`) VALUES
+(1, 'AMX00001', 'Desain Logo 1', 150000, 'Lorem Ipsum Doler', 'b21bdeba61cb9ed6b2950bf1843d31e1.jpg', 8, 1),
+(2, 'AMX00002', 'Desain Logo 2', 165000, 'Lorem Ipsum doller', '4a14e7ecca199a48e479d171599d135d.jpg', 8, 2),
+(3, 'AMX00003', 'Desain Logo 3', 156000, 'Lorem Ipsum Doler', '279baa8c116ddd6d0974930a58247396.jpg', 8, 3),
+(4, 'AMX00004', 'Desain Logo 4', 175000, 'Lorem Ipsum Doller', 'efc077dbdd38c8b1c443e2652c917833.jpg', 8, 4),
+(5, 'AMX00005', 'Desain Logo 5', 145000, 'Lorem Ipsum Doller', '000d044cb62e8110519f00cb01b4ed41.jpg', 8, 5),
+(6, 'AMX00006', 'Desain Browsur 1', 225000, 'Lorem Ipsum doller', '86805284c83450f76bb29f26389aea98.jpg', 9, 6),
+(7, 'AMX00007', 'Desain Browsur 2', 216000, 'Lorem Ipsum Doler', '0754ef11e21639d25fe3a88e23ebf9da.jpg', 9, 5),
+(8, 'AMX00008', 'Desain Browsur 3', 256000, 'tes', '3375f2e8e30370dc020aa5a0475ada52.jpg', 9, 4),
+(9, 'AMX00009', 'Desain Browsur 4', 320000, 'tes', 'c1ace8a2a6162d5871fffd24998874aa.jpg', 9, 3),
+(10, 'AMX00010', 'Desain Browsur 5', 289000, 'tes', '83674e71ad7437af80b0d1857a69f32d.jpg', 9, 2),
+(11, 'AMX00011', 'Desain Kartu Nama 1', 210000, 'tes', 'acba53f8803d971cd93a7cfdfe8cf487.jpg', 4, 1),
+(12, 'AMX00012', 'Desain Kartu Nama 2', 190000, 'tes', '6ba814e0525254e929cf763d716be0e3.jpg', 4, 2),
+(13, 'AMX00013', 'Desain Kartu Nama 3', 175000, 'tes', '74a00c4d85acb623b3012feaadcc26a6.jpg', 4, 3),
+(14, 'AMX00014', 'Desain Kartu Nama 4', 195000, 'tes', '96220651c5b6b636d52071e1f6cf8435.jpg', 4, 4),
+(15, 'AMX00015', 'Desain Kartu Nama 5', 170000, 'tes', 'ba285d3e4793b65f29a1fe73af77264a.jpg', 4, 5),
+(16, 'AMX00016', 'Desain Kartu Nama 6', 220000, 'tes', '3cf61aefcee930681dda1f8088aebbe3.jpg', 4, 6),
+(17, 'AMX00017', 'Desain Poster 1', 130000, 'tes', 'bf56938de4e857bb9a320f311b85d7d7.jpg', 1, 1),
+(18, 'AMX00018', 'Desain Poster 2', 170000, 'tes', '2a64c47b9e0d443001831b1697bfbb4e.jpg', 1, 2),
+(19, 'AMX00019', 'Desain Poster 3', 155000, 'tes', '5a6c4709b9a44cc1258cd2bac84d91b1.jpg', 1, 3),
+(20, 'AMX00020', 'Desain Poster 4', 186000, 'tes', 'd4f4d6157b535ec97faa993080994b53.jpg', 1, 4),
+(21, 'AMX00021', 'Desain Spanduk ', 210000, 'tes', '5958742897aba925a7b30877f0ec5f86.jpg', 6, 5),
+(22, 'AMX00022', 'Desain Spanduk 2', 230000, 'tes', '7ac4d5cf51ca344f95dec2b957faa4ec.jpg', 6, 6),
+(23, 'AMX00023', 'Desain Spanduk 3', 245000, 'tes', 'ea1385eb5947a183b5945665099e2dfc.jpg', 6, 1),
+(24, 'AMX00024', 'Desain Spanduk 4', 254000, 'tes', 'f59d41ffe742c33a056bddbfc70c31a1.jpg', 6, 2),
+(25, 'AMX00025', 'Desain Undangan 1', 320000, 'tes', 'b7f23281ce520123728ccea25ded1683.jpg', 3, 6),
+(26, 'AMX00026', 'Desain Undangan 2', 310000, 'tes', 'ab8cd2de42d115afd903d15a9190ab4a.jpg', 3, 5),
+(27, 'AMX00027', 'Desain Undangan 3', 300000, 'tes', '4baf3f54a77c65a2ad554c6bcf24795f.jpg', 3, 3),
+(28, 'AMX00028', 'Desain Undangan 4', 315000, 'tes', 'f18d149153dc92e49771c39a3664d9d3.jpg', 3, 1),
+(29, 'AMX00029', 'Desain Baju 1', 187000, 'tes', '63f60eb7764e98b770436856dfdf9a0e.jpg', 2, 1),
+(30, 'AMX00030', 'Desain Poster 5', 234000, 'tes', 'f9627146bcb6dc98a38376cf9abcea0e.jpg', 1, 2),
+(31, 'AMX00031', 'Desain Spanduk 5', 250000, 'tes', '8382d37751ad79718156ca3cb56d1bf6.jpg', 6, 5),
+(32, 'AMX00032', 'Desain Baju 2', 215000, 'tes', '431832f1c874baf21463dc8dc001a58d.jpg', 2, 3),
+(33, 'AMX00033', 'Desain Undangan 5', 218000, 'tes', 'd0c59ff8c903663e0a6248046c92af22.jpg', 3, 2);
 
 -- --------------------------------------------------------
 
@@ -343,11 +368,11 @@ INSERT INTO `tbl_produk` (`id_produk`, `kode_produk`, `nama_produk`, `harga`, `s
 -- Table structure for table `tbl_sambutan`
 --
 
-CREATE TABLE IF NOT EXISTS `tbl_sambutan` (
-`id_sambutan` int(11) NOT NULL,
+CREATE TABLE `tbl_sambutan` (
+  `id_sambutan` int(11) NOT NULL,
   `judul` varchar(100) NOT NULL,
   `deskripsi` text NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tbl_sambutan`
@@ -362,12 +387,12 @@ INSERT INTO `tbl_sambutan` (`id_sambutan`, `judul`, `deskripsi`) VALUES
 -- Table structure for table `tbl_seo`
 --
 
-CREATE TABLE IF NOT EXISTS `tbl_seo` (
-`id_seo` int(11) NOT NULL,
+CREATE TABLE `tbl_seo` (
+  `id_seo` int(11) NOT NULL,
   `tittle` varchar(50) NOT NULL,
   `keyword` varchar(500) NOT NULL,
   `description` text NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tbl_seo`
@@ -382,13 +407,13 @@ INSERT INTO `tbl_seo` (`id_seo`, `tittle`, `keyword`, `description`) VALUES
 -- Table structure for table `tbl_slider`
 --
 
-CREATE TABLE IF NOT EXISTS `tbl_slider` (
-`id_slider` int(11) NOT NULL,
+CREATE TABLE `tbl_slider` (
+  `id_slider` int(11) NOT NULL,
   `tittle` varchar(200) NOT NULL,
   `description` text NOT NULL,
   `gambar` varchar(200) NOT NULL,
   `status` int(2) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tbl_slider`
@@ -405,12 +430,12 @@ INSERT INTO `tbl_slider` (`id_slider`, `tittle`, `description`, `gambar`, `statu
 -- Table structure for table `tbl_sosial_media`
 --
 
-CREATE TABLE IF NOT EXISTS `tbl_sosial_media` (
-`id_sosial_media` int(11) NOT NULL,
+CREATE TABLE `tbl_sosial_media` (
+  `id_sosial_media` int(11) NOT NULL,
   `tw` varchar(100) NOT NULL,
   `fb` varchar(100) NOT NULL,
   `gp` varchar(100) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tbl_sosial_media`
@@ -425,18 +450,18 @@ INSERT INTO `tbl_sosial_media` (`id_sosial_media`, `tw`, `fb`, `gp`) VALUES
 -- Table structure for table `tbl_tentangkami`
 --
 
-CREATE TABLE IF NOT EXISTS `tbl_tentangkami` (
-`id_tentangkami` int(11) NOT NULL,
+CREATE TABLE `tbl_tentangkami` (
+  `id_tentangkami` int(11) NOT NULL,
   `judul` varchar(100) NOT NULL,
   `deskripsi` text NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tbl_tentangkami`
 --
 
 INSERT INTO `tbl_tentangkami` (`id_tentangkami`, `judul`, `deskripsi`) VALUES
-(1, 'Kami Hadir Untuk Anda | Dg. Shop', 'Dg. Shop adalah situs rensi pembelian desain dan jasa desainer.<br>Salam Owner<br>Ahmad Sandi<br><br>"');
+(1, 'Kami Hadir Untuk Anda | Dg. Shop', 'Halo sahabat yang luar biasa, pada kesempatan kali ini izinkan kami dari DgShop untuk memperkenalkan diri. Mudaha-mudahan dengan adanya perkenalan ini sahabat-sahabat sekalian akan lebih senang berbelanja di toko online ini.<br><br>Sungguh terhormat bagi kami jika Anda mengunjungi web kami dan bisa memperoleh banyak hal yang bermanfaat.<br><br><blockquote>DgShop merupakan sebuah web yang menyediakan pembelian desain dan jasa desainer. DgShop didirikann oleh Mahasiswa Kelompok I kelas 3A-D4 Teknik Komputer dan Jaringan Jurusan Teknik Elektro Politeknik Negeri Ujung Pandang Tahun 2018. Keberadaan dari toko online ini diharapkan dapat mempermudah Anda untuk mendapatkan berbagai produk berkualitas tinggi namun dengan harga terjangkau.<br>Dalam memberi layanan kami selalu mencoba memberi persembahan terbaik kepada siapapun. Selain itu kami juga selalu menjunjung tinggi nilai-nilai etika yang baik seperti kejujuran, ketetapan, dan profesinalitas dalam berbisnis. Mudah-mudahan dengan adanya toko online kami bisa memberi banyak manfaat bagi Anda.<br><br></blockquote>Sekian dulu perkenalan ini, <i>Salam Super dan Semoga Anda Sukses Selalu !!!</i><br><br><ul><li><b>Rafsanjani Lestari Negara</b></li><li><b>Akhmad Zhadiqin Hirman</b></li><li><b>Yori Putra Pradana</b></li><li><b>Ahmad Sandi</b></li></ul><b>Jalan Perintis Kemerdekaan KM.10 Tamanlanrea, Makassar 90245<br></b><br><blockquote style="margin: 0 0 0 40px; border: none; padding: 0px;"><blockquote style="margin: 0 0 0 40px; border: none; padding: 0px;"><blockquote style="margin: 0 0 0 40px; border: none; padding: 0px;"><blockquote style="margin: 0 0 0 40px; border: none; padding: 0px;"><b><i>Selalu Melakukan yang Terbaik Maka Kau Akan Menikmati Hasilnya !!!</i></b></blockquote></blockquote></blockquote></blockquote>');
 
 -- --------------------------------------------------------
 
@@ -444,14 +469,14 @@ INSERT INTO `tbl_tentangkami` (`id_tentangkami`, `judul`, `deskripsi`) VALUES
 -- Table structure for table `tbl_transaksi_detail`
 --
 
-CREATE TABLE IF NOT EXISTS `tbl_transaksi_detail` (
-`id_transaksi_detail` int(11) NOT NULL,
+CREATE TABLE `tbl_transaksi_detail` (
+  `id_transaksi_detail` int(11) NOT NULL,
   `kode_transaksi` bigint(15) NOT NULL,
   `kode_produk` varchar(20) NOT NULL,
   `nama_produk` varchar(25) NOT NULL,
   `harga` varchar(20) NOT NULL,
   `jumlah` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tbl_transaksi_detail`
@@ -476,8 +501,8 @@ INSERT INTO `tbl_transaksi_detail` (`id_transaksi_detail`, `kode_transaksi`, `ko
 -- Table structure for table `tbl_transaksi_header`
 --
 
-CREATE TABLE IF NOT EXISTS `tbl_transaksi_header` (
-`id_transaksi_header` int(11) NOT NULL,
+CREATE TABLE `tbl_transaksi_header` (
+  `id_transaksi_header` int(11) NOT NULL,
   `kode_transaksi` bigint(15) NOT NULL,
   `penerima` varchar(30) NOT NULL,
   `email` varchar(30) NOT NULL,
@@ -489,7 +514,7 @@ CREATE TABLE IF NOT EXISTS `tbl_transaksi_header` (
   `bank_id` int(11) NOT NULL,
   `jasapengiriman_id` int(11) NOT NULL,
   `status` int(2) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tbl_transaksi_header`
@@ -512,127 +537,127 @@ INSERT INTO `tbl_transaksi_header` (`id_transaksi_header`, `kode_transaksi`, `pe
 -- Indexes for table `tbl_admin`
 --
 ALTER TABLE `tbl_admin`
- ADD PRIMARY KEY (`id_admin`);
+  ADD PRIMARY KEY (`id_admin`);
 
 --
 -- Indexes for table `tbl_bank`
 --
 ALTER TABLE `tbl_bank`
- ADD PRIMARY KEY (`id_bank`);
+  ADD PRIMARY KEY (`id_bank`);
 
 --
 -- Indexes for table `tbl_brand`
 --
 ALTER TABLE `tbl_brand`
- ADD PRIMARY KEY (`id_brand`);
+  ADD PRIMARY KEY (`id_brand`);
 
 --
 -- Indexes for table `tbl_carabelanja`
 --
 ALTER TABLE `tbl_carabelanja`
- ADD PRIMARY KEY (`id_carabelanja`);
+  ADD PRIMARY KEY (`id_carabelanja`);
 
 --
 -- Indexes for table `tbl_galeri`
 --
 ALTER TABLE `tbl_galeri`
- ADD PRIMARY KEY (`id_galeri`);
+  ADD PRIMARY KEY (`id_galeri`);
 
 --
 -- Indexes for table `tbl_hubungikami`
 --
 ALTER TABLE `tbl_hubungikami`
- ADD PRIMARY KEY (`id_hubungikami`);
+  ADD PRIMARY KEY (`id_hubungikami`);
 
 --
 -- Indexes for table `tbl_hubungi_kami_kirim`
 --
 ALTER TABLE `tbl_hubungi_kami_kirim`
- ADD PRIMARY KEY (`id_hubungi_kami_kirim`);
+  ADD PRIMARY KEY (`id_hubungi_kami_kirim`);
 
 --
 -- Indexes for table `tbl_jasapengiriman`
 --
 ALTER TABLE `tbl_jasapengiriman`
- ADD PRIMARY KEY (`id_jasapengiriman`);
+  ADD PRIMARY KEY (`id_jasapengiriman`);
 
 --
 -- Indexes for table `tbl_kategori`
 --
 ALTER TABLE `tbl_kategori`
- ADD PRIMARY KEY (`id_kategori`);
+  ADD PRIMARY KEY (`id_kategori`);
 
 --
 -- Indexes for table `tbl_kategorigaleri`
 --
 ALTER TABLE `tbl_kategorigaleri`
- ADD PRIMARY KEY (`id_kategorigaleri`);
+  ADD PRIMARY KEY (`id_kategorigaleri`);
 
 --
 -- Indexes for table `tbl_kontak`
 --
 ALTER TABLE `tbl_kontak`
- ADD PRIMARY KEY (`id_kontak`);
+  ADD PRIMARY KEY (`id_kontak`);
 
 --
 -- Indexes for table `tbl_kota`
 --
 ALTER TABLE `tbl_kota`
- ADD PRIMARY KEY (`id_kota`);
+  ADD PRIMARY KEY (`id_kota`);
 
 --
 -- Indexes for table `tbl_logo`
 --
 ALTER TABLE `tbl_logo`
- ADD PRIMARY KEY (`id_logo`);
+  ADD PRIMARY KEY (`id_logo`);
 
 --
 -- Indexes for table `tbl_produk`
 --
 ALTER TABLE `tbl_produk`
- ADD PRIMARY KEY (`id_produk`);
+  ADD PRIMARY KEY (`id_produk`);
 
 --
 -- Indexes for table `tbl_sambutan`
 --
 ALTER TABLE `tbl_sambutan`
- ADD PRIMARY KEY (`id_sambutan`);
+  ADD PRIMARY KEY (`id_sambutan`);
 
 --
 -- Indexes for table `tbl_seo`
 --
 ALTER TABLE `tbl_seo`
- ADD PRIMARY KEY (`id_seo`);
+  ADD PRIMARY KEY (`id_seo`);
 
 --
 -- Indexes for table `tbl_slider`
 --
 ALTER TABLE `tbl_slider`
- ADD PRIMARY KEY (`id_slider`);
+  ADD PRIMARY KEY (`id_slider`);
 
 --
 -- Indexes for table `tbl_sosial_media`
 --
 ALTER TABLE `tbl_sosial_media`
- ADD PRIMARY KEY (`id_sosial_media`);
+  ADD PRIMARY KEY (`id_sosial_media`);
 
 --
 -- Indexes for table `tbl_tentangkami`
 --
 ALTER TABLE `tbl_tentangkami`
- ADD PRIMARY KEY (`id_tentangkami`);
+  ADD PRIMARY KEY (`id_tentangkami`);
 
 --
 -- Indexes for table `tbl_transaksi_detail`
 --
 ALTER TABLE `tbl_transaksi_detail`
- ADD PRIMARY KEY (`id_transaksi_detail`);
+  ADD PRIMARY KEY (`id_transaksi_detail`);
 
 --
 -- Indexes for table `tbl_transaksi_header`
 --
 ALTER TABLE `tbl_transaksi_header`
- ADD PRIMARY KEY (`id_transaksi_header`);
+  ADD PRIMARY KEY (`id_transaksi_header`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -642,107 +667,107 @@ ALTER TABLE `tbl_transaksi_header`
 -- AUTO_INCREMENT for table `tbl_admin`
 --
 ALTER TABLE `tbl_admin`
-MODIFY `id_admin` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
+  MODIFY `id_admin` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT for table `tbl_bank`
 --
 ALTER TABLE `tbl_bank`
-MODIFY `id_bank` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
+  MODIFY `id_bank` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `tbl_brand`
 --
 ALTER TABLE `tbl_brand`
-MODIFY `id_brand` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
+  MODIFY `id_brand` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT for table `tbl_carabelanja`
 --
 ALTER TABLE `tbl_carabelanja`
-MODIFY `id_carabelanja` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+  MODIFY `id_carabelanja` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `tbl_galeri`
 --
 ALTER TABLE `tbl_galeri`
-MODIFY `id_galeri` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+  MODIFY `id_galeri` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `tbl_hubungikami`
 --
 ALTER TABLE `tbl_hubungikami`
-MODIFY `id_hubungikami` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
+  MODIFY `id_hubungikami` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `tbl_hubungi_kami_kirim`
 --
 ALTER TABLE `tbl_hubungi_kami_kirim`
-MODIFY `id_hubungi_kami_kirim` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
+  MODIFY `id_hubungi_kami_kirim` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT for table `tbl_jasapengiriman`
 --
 ALTER TABLE `tbl_jasapengiriman`
-MODIFY `id_jasapengiriman` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
+  MODIFY `id_jasapengiriman` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `tbl_kategori`
 --
 ALTER TABLE `tbl_kategori`
-MODIFY `id_kategori` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=10;
+  MODIFY `id_kategori` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 --
 -- AUTO_INCREMENT for table `tbl_kategorigaleri`
 --
 ALTER TABLE `tbl_kategorigaleri`
-MODIFY `id_kategorigaleri` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+  MODIFY `id_kategorigaleri` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `tbl_kontak`
 --
 ALTER TABLE `tbl_kontak`
-MODIFY `id_kontak` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+  MODIFY `id_kontak` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `tbl_kota`
 --
 ALTER TABLE `tbl_kota`
-MODIFY `id_kota` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=8;
+  MODIFY `id_kota` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT for table `tbl_logo`
 --
 ALTER TABLE `tbl_logo`
-MODIFY `id_logo` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+  MODIFY `id_logo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `tbl_produk`
 --
 ALTER TABLE `tbl_produk`
-MODIFY `id_produk` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=8;
+  MODIFY `id_produk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 --
 -- AUTO_INCREMENT for table `tbl_sambutan`
 --
 ALTER TABLE `tbl_sambutan`
-MODIFY `id_sambutan` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+  MODIFY `id_sambutan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `tbl_seo`
 --
 ALTER TABLE `tbl_seo`
-MODIFY `id_seo` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+  MODIFY `id_seo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `tbl_slider`
 --
 ALTER TABLE `tbl_slider`
-MODIFY `id_slider` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
+  MODIFY `id_slider` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `tbl_sosial_media`
 --
 ALTER TABLE `tbl_sosial_media`
-MODIFY `id_sosial_media` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+  MODIFY `id_sosial_media` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `tbl_tentangkami`
 --
 ALTER TABLE `tbl_tentangkami`
-MODIFY `id_tentangkami` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+  MODIFY `id_tentangkami` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `tbl_transaksi_detail`
 --
 ALTER TABLE `tbl_transaksi_detail`
-MODIFY `id_transaksi_detail` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=12;
+  MODIFY `id_transaksi_detail` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 --
 -- AUTO_INCREMENT for table `tbl_transaksi_header`
 --
 ALTER TABLE `tbl_transaksi_header`
-MODIFY `id_transaksi_header` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=8;
+  MODIFY `id_transaksi_header` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
