@@ -83,12 +83,12 @@
 										</div>
 									</div>
 
-									<div class="control-group">
+									<!--<div class="control-group">
 										<label class="control-label">Stok</label>
 										<div class="controls">
 											<input type="text" name="stok" id="stok" class="span6 m-wrap" value="<?php echo $stok;?>" />
 										</div>
-									</div>
+									</div>-->
 
 									<div class="control-group">
 										<label class="control-label">Deskripsi</label>
