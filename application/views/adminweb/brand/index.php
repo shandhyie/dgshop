@@ -36,7 +36,7 @@
 									<thead>
 										<tr>
 											<th>No</th>
-											<th>Nama Brand</th>
+											<th>Nama Desainer</th>
 											<th>Action</th>
 											
 										</tr>
@@ -83,14 +83,14 @@
 				<div id="form_modal10" class="modal hide fade" role="dialog" aria-labelledby="myModalLabel10" aria-hidden="true">
 											<div class="modal-header">
 												<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
-												<h3 id="myModalLabel10">Add brand</h3>
+												<h3 id="myModalLabel10">Add Desainer</h3>
 											</div>
 											<div class="modal-body">
 												<div class="row-fluid">
 													<div class="form-horizontal">
 													
 														<div class="control-group">
-															<label class="control-label">Nama Brand</label>
+															<label class="control-label">Nama Desainer</label>
 															<div class="controls">
 																<input class="span8 m-wrap" name="nama_brand" id="nama_brand" type="text" value=""  />
 															</div>

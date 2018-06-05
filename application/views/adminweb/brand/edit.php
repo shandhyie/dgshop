@@ -3,7 +3,7 @@
 						<!-- BEGIN VALIDATION STATES-->
 						<div class="portlet box blue">
 							<div class="portlet-title">
-								<div class="caption"><i class="icon-reorder"></i>Edit Brand</div>
+								<div class="caption"><i class="icon-reorder"></i>Edit Desainer</div>
 								<div class="tools">
 									<a href="javascript:;" class="collapse"></a>
 									
@@ -23,7 +23,7 @@
 									
 
 									<div class="control-group">
-										<label class="control-label">Brand</label>
+										<label class="control-label">Desainer</label>
 										<div class="controls">
 											<input type="text" name="nama_brand" id="nama_brand" class="span6 m-wrap" value="<?php echo $nama_brand;?>"/>
 										</div>
