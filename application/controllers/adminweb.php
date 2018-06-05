@@ -2089,7 +2089,7 @@ class adminweb extends CI_Controller {
 		$this->admin_model->SimpanBukuTamuAdd($email,$judul,$isi_hubungi_kami_kirim);
 
 		$this->load->library('email');
-		$this->email->from('info@adriano.com', 'Adriano MX Online Shop');
+		$this->email->from('dgshop@gmail.com', 'Dg.Shop');
 		$this->email->to($email); 	
 		$this->email->subject($judul);
 		$this->email->message($isi_hubungi_kami_kirim);	
@@ -2115,7 +2115,7 @@ class adminweb extends CI_Controller {
 		$this->admin_model->SimpanBukuTamuAdd($email,$judul,$isi_hubungi_kami_kirim);
 
 		$this->load->library('email');
-		$this->email->from('info@adriano.com', 'Adriano MX Online Shop');
+		$this->email->from('dgshop@gmail.com', 'Dg.Shop');
 		$this->email->to($email); 	
 		$this->email->subject($judul);
 		$this->email->message($isi_hubungi_kami_kirim);	
