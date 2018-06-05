@@ -1,8 +1,8 @@
 <?php
 
-class admin_model extends CI_Model {
+class user_model extends CI_Model {
 
-	function CekAdminLogin($data) {
+	function CekUserLogin($data) {
 
 		$cek['username'] = mysql_real_escape_string($data['username']);
 		$cek['password'] = md5(mysql_real_escape_string($data['password']));
@@ -24,11 +24,11 @@ class admin_model extends CI_Model {
 				$this->session->set_userdata($sess_data);
 
 			}
-			redirect("adminweb/home");
+			redirect("");
 		}
 		else {
 			$this->session->set_flashdata("error","Username atau Password Anda Salah!");
-			redirect('adminweb/index');
+			redirect('');
 		}
 
 	}
@@ -277,7 +277,7 @@ class admin_model extends CI_Model {
 		else {
 			$kode="00001";
 		}
-		return "DGS".$kode;
+		return "AMX".$kode;
 	}
 
 	function DeleteProduk($id_produk) {

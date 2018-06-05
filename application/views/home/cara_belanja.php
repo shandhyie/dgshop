@@ -64,6 +64,21 @@
 								<li><a href="<?php echo $fb;?>"><i class="fa fa-facebook"></i></a></li>
 								<li><a href="<?php echo $tw;?>"><i class="fa fa-twitter"></i></a></li>
 								<li><a href="<?php echo $gp;?>"><i class="fa fa-google-plus"></i></a></li>
+								<!-- BEGIN USER LOGIN DROPDOWN -->
+						          <li class="dropdown user">
+						            <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+						            <img alt="" src="<?php echo base_url();?>assets/img/avatar_small.png" />
+						            <span class="username"><?php echo $this->session->userdata('nama_admin');?></span>
+						            <i class="icon-angle-down"></i>
+						            </a>
+						            <ul class="dropdown-menu">
+						              <!-- <li><a href="#"><i class="icon-user"></i> My Profile</a></li>
+						              <li class="divider"></li> -->
+						              <li><a href="javascript:;" id="trigger_fullscreen"><i class="icon-move"></i> Full Screen</a></li>
+						              <li><a href="<?php echo base_url();?>user/logout"><i class="icon-key"></i> Log Out</a></li>
+						            </ul>
+						          </li>
+						          <!-- END USER LOGIN DROPDOWN -->
 							</ul>
 						</div>
 					</div>

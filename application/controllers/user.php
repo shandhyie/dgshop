@@ -1,15 +1,15 @@
 <?php
 
-class adminweb extends CI_Controller {
+class user extends CI_Controller {
 
 	public function __construct() {
 		parent::__construct();
-		$this->load->model('admin_model');
+		$this->load->model('user_model');
 	}
 
 	public function index() {
-		$data['logo'] = $this->admin_model->GetLogo();
-		$this->load->view('adminweb/admin_login',$data);
+		$data['logo'] = $this->user_model->GetLogo();
+		$this->load->view('user/user_login',$data);
 	}
 
 	public function login() {
@@ -19,8 +19,8 @@ class adminweb extends CI_Controller {
 
 		if ($this->form_validation->run()==FALSE) {
 
-		$data['logo'] = $this->admin_model->GetLogo();
-		$this->load->view('adminweb/admin_login',$data);
+		$data['logo'] = $this->user_model->GetLogo();
+		$this->load->view('user/user_login',$data);
 
 		}
 		else {
@@ -28,7 +28,7 @@ class adminweb extends CI_Controller {
 			$data['username'] = $this->input->post('username');
 			$data['password'] = $this->input->post('password');
 
-			$this->admin_model->CekAdminLogin($data);
+			$this->user_model->CekUserLogin($data);
 
 		}
 	}
@@ -36,17 +36,17 @@ class adminweb extends CI_Controller {
 	public function home() {
 
 		if($this->session->userdata("logged_in")!=="") {
-			$this->template->load('template','adminweb/home');
+			$this->template->load('beranda','user/home');
 		}
 		else{
-			redirect('adminweb');
+			redirect('user');
 
 		}
 	}
 
 	public function logout() {
 		$this->session->sess_destroy();
-		redirect("adminweb");
+		redirect("user");
 	} 
 
 	//Awal Seo

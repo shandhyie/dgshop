@@ -64,21 +64,6 @@
 								<li><a href="<?php echo $fb;?>"><i class="fa fa-facebook"></i></a></li>
 								<li><a href="<?php echo $tw;?>"><i class="fa fa-twitter"></i></a></li>
 								<li><a href="<?php echo $gp;?>"><i class="fa fa-google-plus"></i></a></li>
-								<!-- BEGIN USER LOGIN DROPDOWN -->
-						          <li class="dropdown user">
-						            <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-						            <img alt="" src="<?php echo base_url();?>assets/img/avatar_small.png" />
-						            <span class="username"><?php echo $this->session->userdata('nama_admin');?></span>
-						            <i class="icon-angle-down"></i>
-						            </a>
-						            <ul class="dropdown-menu">
-						              <!-- <li><a href="#"><i class="icon-user"></i> My Profile</a></li>
-						              <li class="divider"></li> -->
-						              <li><a href="javascript:;" id="trigger_fullscreen"><i class="icon-move"></i> Full Screen</a></li>
-						              <li><a href="<?php echo base_url();?>user/logout"><i class="icon-key"></i> Log Out</a></li>
-						            </ul>
-						          </li>
-						          <!-- END USER LOGIN DROPDOWN -->
 							</ul>
 						</div>
 					</div>
@@ -153,9 +138,11 @@
 						</div>
 					</div>
 					<div class="col-sm-3">
+						<?php echo form_open('home/cari');?>
 						<div class="search_box pull-right">
-							<input type="text" placeholder="Search"/>
+							<input type="text" name="cari" placeholder="Search"/>
 						</div>
+						<?php echo form_close();?>
 					</div>
 				</div>
 			</div>
@@ -164,7 +151,81 @@
 
 	
 	
-	
+	<section id="slider"><!--slider-->
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12">
+					<div id="slider-carousel" class="carousel slide" data-ride="carousel">
+						<ol class="carousel-indicators">
+							<li data-target="#slider-carousel" data-slide-to="0" class="active"></li>
+							<li data-target="#slider-carousel" data-slide-to="1"></li>
+							<li data-target="#slider-carousel" data-slide-to="2"></li>
+						</ol>
+						
+						<div class="carousel-inner">
+							
+							<?php
+							$terakhir = $this->db->query("select max(id_slider) as terakhir from tbl_slider where status='1' ");
+								foreach ($terakhir->result_array() as $value) {
+									$t = $value['terakhir'];
+								}
+							?>
+							<?php
+							foreach ($slider->result_array() as $value) { 
+
+								if ($value['id_slider']==$t) { ?>
+								<div class="item active">
+									<div class="col-sm-6">
+										<h1><span>Dg.</span>-Shop</h1>
+										<h2><?php echo $value['tittle'];?></h2>
+										<p><?php echo strip_tags(substr($value['description'],0,200));?></p>
+										<a href="<?php echo base_url();?>home/detail_slider/<?php echo $value['id_slider'];?>" class="btn btn-default get"> Read More</a>
+									</div>
+									<div class="col-sm-6">
+										<img src="<?php echo base_url();?>images/slider/<?php echo $value['gambar'];?>" class="girl img-responsive" alt="<?php echo $value['tittle'];?>" />
+										
+									</div>
+								</div>
+
+								<?php
+								}
+								else { ?>
+								<div class="item">
+									<div class="col-sm-6">
+										<h1><span>Dg.</span>-Shop</h1>
+										<h2><?php echo $value['tittle'];?></h2>
+										<p><?php echo strip_tags(substr($value['description'],0,200));?></p>
+										<a href="<?php echo base_url();?>home/detail_slider/<?php echo $value['id_slider'];?>" class="btn btn-default get"> Read More</a>
+									</div>
+									<div class="col-sm-6">
+										<img src="<?php echo base_url();?>images/slider/<?php echo $value['gambar'];?>" class="girl img-responsive" alt="<?php echo $value['tittle'];?>" />
+										
+									</div>
+								</div>
+								<?php
+								}
+
+							?>
+							
+							<?php
+							}
+							?>
+							
+							
+						</div>
+						
+						<a href="#slider-carousel" class="left control-carousel hidden-xs" data-slide="prev">
+							<i class="fa fa-angle-left"></i>
+						</a>
+						<a href="#slider-carousel" class="right control-carousel hidden-xs" data-slide="next">
+							<i class="fa fa-angle-right"></i>
+						</a>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</section><!--/slider-->
 	
 	<section>
 		<div class="container">
@@ -208,6 +269,26 @@
 							</div>
 						</div><!--/brands_products-->
 					</br>
+
+						<div class="brands_products"><!--Jasa Pengiriman-->
+							<h2>Pengiriman</h2>
+							<div class="brands-name">
+								<ul class="nav nav-pills nav-stacked">
+									<?php
+									foreach ($jasapengiriman->result_array() as $value) { ?>
+									<li><a href=""> <span class="pull-right"></span>
+										<img src="<?php echo base_url();?>images/jasapengiriman/<?php echo $value['gambar'];?>">
+										</a>
+									</li>
+									
+									<?php
+									}
+									?>
+									
+									
+								</ul>
+							</div>
+						</div><!--/Jasa Pengiriman-->
 						
 						
 						
@@ -219,53 +300,33 @@
 				<div class="col-sm-9 padding-right">
 					<div class="features_items"><!--features_items-->
 						<h2 class="title text-center">Features Producs</h2>
-						<h2><?php foreach ($nama_brand->result_array() as $value) {
-							echo $value['nama_brand'];
-						}
-						?>
-
-						</h2>
 						
 						<?php
-						if ($produk_brand->num_rows()>0) {
-
-							foreach ($produk_brand->result_array() as $value) { 
-							$no;
-							?>
+						foreach ($produk->result_array() as $value) { ?>
 						<div class="col-sm-4">
 							<div class="product-image-wrapper">
 								<div class="single-products">
 										<div class="productinfo text-center">
 											<img src="<?php echo base_url();?>images/produk/<?php echo $value['gambar'];?>" alt="" />
 											<h2><?php echo $value['harga'];?></h2>
-											<p><?php echo $value['nama_brand'];?></p>
-											<p><?php echo $value['nama_produk'];?></p>
-											<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+											<p><?php echo $value['kode_produk'];?></p>
+											<a href="<?php echo base_url();?>home/produk/<?php echo $value['id_produk'];?>"><p> <?php echo $value['nama_produk'];?></p></a>
+											<a href="<?php echo base_url();?>home/keranjang/<?php echo $value['id_produk'];?>" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
 										</div>
 										<div class="product-overlay">
 											<div class="overlay-content">
 												<h2><?php echo $value['harga'];?></h2>
-												<p><?php echo $value['nama_brand'];?></p>
-												<p><?php echo $value['nama_produk'];?></p>
-												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+												<p><?php echo $value['kode_produk'];?></p>
+												<a href="<?php echo base_url();?>home/produk/<?php echo $value['id_produk'];?>"><p> <?php echo $value['nama_produk'];?></p></a>
+												<a href="<?php echo base_url();?>home/keranjang/<?php echo $value['id_produk'];?>" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
 											</div>
 										</div>
 								</div>
 							</div>
 						</div>
 						<?php
-						
-	 					
-						}
-						
-
-						}
-						else {
-							echo "Tidak Ada Products";
 						}
 						?>
-						
-
 						
 						
 						
@@ -276,15 +337,74 @@
 					</div><!--features_items-->
 					
 					
-						
-							<?php
-								echo $paginator;
-							?>
-						
-						
-						
 					
-					
+					<div class="recommended_items"><!--recommended_items-->
+						<h2 class="title text-center">recommended items</h2>
+						
+						<div id="recommended-item-carousel" class="carousel slide" data-ride="carousel">
+							<div class="carousel-inner">
+								
+										
+										<div class="item active">	
+											<?php
+									foreach ($random_active->result_array() as $value) { ?>
+										<div class="col-sm-4">
+											<div class="product-image-wrapper">
+												<div class="single-products">
+													<div class="productinfo text-center">
+														<img src="<?php echo base_url();?>images/produk/<?php echo $value['gambar'];?>" alt="" />
+														<h2><?php echo $value['harga'];?></h2>
+														<p><?php echo $value['kode_produk'];?></p>
+														<a href="<?php echo base_url();?>home/produk/<?php echo $value['id_produk'];?>"><p> <?php echo $value['nama_produk'];?></p></a>
+														<a href="<?php echo base_url();?>home/keranjang/<?php echo $value['id_produk'];?>" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+													</div>
+													
+												</div>
+											</div>
+										</div>
+										<?php
+									}
+									?>
+									</div>
+									
+
+									
+									<div class="item">	
+										<?php
+									foreach ($random->result_array() as $value) { ?>
+										<div class="col-sm-4">
+											<div class="product-image-wrapper">
+												<div class="single-products">
+													<div class="productinfo text-center">
+														<img src="<?php echo base_url();?>images/produk/<?php echo $value['gambar'];?>" alt="" />
+														<h2><?php echo $value['harga'];?></h2>
+														<p><?php echo $value['kode_produk'];?></p>
+														<a href="<?php echo base_url();?>home/produk/<?php echo $value['id_produk'];?>"><p> <?php echo $value['nama_produk'];?></p></a>
+														<a href="<?php echo base_url();?>home/keranjang/<?php echo $value['id_produk'];?>" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+													</div>
+													
+												</div>
+											</div>
+										</div>
+										<?php
+									}
+									?>
+									</div>
+									
+										
+										
+
+							
+								
+							</div>
+							 <a class="left recommended-item-control" href="#recommended-item-carousel" data-slide="prev">
+								<i class="fa fa-angle-left"></i>
+							  </a>
+							  <a class="right recommended-item-control" href="#recommended-item-carousel" data-slide="next">
+								<i class="fa fa-angle-right"></i>
+							  </a>			
+						</div>
+					</div><!--/recommended_items-->
 					
 				</div>
 			</div>
@@ -297,7 +417,7 @@
 				<div class="row">
 					<div class="col-sm-2">
 						<div class="companyinfo">
-							<h2><span>Dg.</span>Shop</h2>
+							<h2><span>Dg.</span>-Shop</h2>
 							<h4>Desain Grafis Shop</h4>
 							<!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,sed do eiusmod tempor</p> -->
 						</div>
@@ -356,5 +476,23 @@
 	<script src="<?php echo base_url();?>asset/js/price-range.js"></script>
     <script src="<?php echo base_url();?>asset/js/jquery.prettyPhoto.js"></script>
     <script src="<?php echo base_url();?>asset/js/main.js"></script>
+
+
+    <script>
+    jQuery(document).ready(function() {       
+       // initiate layout and plugins
+       App.init();
+       UIModals.init();
+       FormComponents.init();
+       TableEditable.init();
+      
+
+    });
+
+    
+
+
+  </script>
+  <!-- END JAVASCRIPTS -->  
 </body>
 </html>

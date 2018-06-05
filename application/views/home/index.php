@@ -65,20 +65,17 @@
 								<li><a href="<?php echo $tw;?>"><i class="fa fa-twitter"></i></a></li>
 								<li><a href="<?php echo $gp;?>"><i class="fa fa-google-plus"></i></a></li>
 								<!-- BEGIN USER LOGIN DROPDOWN -->
-					          <li class="dropdown user">
-					            <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-					            <img alt="" src="<?php echo base_url();?>assets/img/avatar_small.png" />
-					            <span class="username"><?php echo $this->session->userdata('nama_user');?></span>
-					            <i class="icon-angle-down"></i>
-					            </a>
-					            <ul class="dropdown-menu">
-					              <!-- <li><a href="#"><i class="icon-user"></i> My Profile</a></li>
-					              <li class="divider"></li> -->
-					              <li><a href="javascript:;" id="trigger_fullscreen"><i class="icon-move"></i> Full Screen</a></li>
-					              <li><a href="<?php echo base_url();?>home/logout"><i class="icon-key"></i> Log Out</a></li>
-					            </ul>
-					          </li>
-					          <!-- END USER LOGIN DROPDOWN -->
+						          <li>
+						            <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+						            <img alt="" src="<?php echo base_url();?>assets/img/avatar_small.png" />
+						            <span class="username"><?php echo $this->session->userdata('nama_admin');?></span>
+						            <i class="icon-angle-down"></i>
+						            </a>
+						            <ul class="dropdown-menu">
+						              <li><a href="<?php echo base_url();?>user/logout"><i class="icon-key"></i> Log Out</a></li>
+						            </ul>
+						          </li>
+						          <!-- END USER LOGIN DROPDOWN -->
 							</ul>
 						</div>
 					</div>
@@ -284,26 +281,6 @@
 							</div>
 						</div><!--/brands_products-->
 					</br>
-
-						<div class="brands_products"><!--Jasa Pengiriman-->
-							<h2>Pengiriman</h2>
-							<div class="brands-name">
-								<ul class="nav nav-pills nav-stacked">
-									<?php
-									foreach ($jasapengiriman->result_array() as $value) { ?>
-									<li><a href=""> <span class="pull-right"></span>
-										<img src="<?php echo base_url();?>images/jasapengiriman/<?php echo $value['gambar'];?>">
-										</a>
-									</li>
-									
-									<?php
-									}
-									?>
-									
-									
-								</ul>
-							</div>
-						</div><!--/Jasa Pengiriman-->
 						
 						
 						
@@ -324,14 +301,14 @@
 										<div class="productinfo text-center">
 											<img src="<?php echo base_url();?>images/produk/<?php echo $value['gambar'];?>" alt="" />
 											<h2><?php echo $value['harga'];?></h2>
-											<p><?php echo $value['kode_produk'];?></p>
+											<p><?php echo $value['nama_brand'];?></p>
 											<a href="<?php echo base_url();?>home/produk/<?php echo $value['id_produk'];?>"><p> <?php echo $value['nama_produk'];?></p></a>
 											<a href="<?php echo base_url();?>home/keranjang/<?php echo $value['id_produk'];?>" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
 										</div>
 										<div class="product-overlay">
 											<div class="overlay-content">
 												<h2><?php echo $value['harga'];?></h2>
-												<p><?php echo $value['kode_produk'];?></p>
+												<p><?php echo $value['nama_brand'];?></p>
 												<a href="<?php echo base_url();?>home/produk/<?php echo $value['id_produk'];?>"><p> <?php echo $value['nama_produk'];?></p></a>
 												<a href="<?php echo base_url();?>home/keranjang/<?php echo $value['id_produk'];?>" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
 											</div>
@@ -369,7 +346,7 @@
 													<div class="productinfo text-center">
 														<img src="<?php echo base_url();?>images/produk/<?php echo $value['gambar'];?>" alt="" />
 														<h2><?php echo $value['harga'];?></h2>
-														<p><?php echo $value['kode_produk'];?></p>
+														<p><?php echo $value['nama_brand'];?></p>
 														<a href="<?php echo base_url();?>home/produk/<?php echo $value['id_produk'];?>"><p> <?php echo $value['nama_produk'];?></p></a>
 														<a href="<?php echo base_url();?>home/keranjang/<?php echo $value['id_produk'];?>" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
 													</div>
