@@ -155,7 +155,7 @@
 				</ol>
 			</div>
 			<?php if(!$this->cart->contents()):
-				echo 'Maaf, Keranjang Belanja Anda Masih Kosong.';
+				echo 'Maaf, Keranjang Belanja Anda Masih Kosong<br><br><br><br>.';
 			else:
 			?>
 			<?php echo form_open('home/keranjang_update'); ?>
@@ -252,7 +252,7 @@ endif;
 							<!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,sed do eiusmod tempor</p> -->
 						</div>
 					</div>
-					<div class="col-sm-7">
+					<div class="col-sm-10">
 						<?php
 						foreach ($bank->result_array() as $value) {?>
 

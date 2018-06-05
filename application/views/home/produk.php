@@ -350,7 +350,7 @@
 							<!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,sed do eiusmod tempor</p> -->
 						</div>
 					</div>
-					<div class="col-sm-7">
+					<div class="col-sm-10">
 						<?php
 						foreach ($bank->result_array() as $value) {?>
 

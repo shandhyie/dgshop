@@ -64,6 +64,21 @@
 								<li><a href="<?php echo $fb;?>"><i class="fa fa-facebook"></i></a></li>
 								<li><a href="<?php echo $tw;?>"><i class="fa fa-twitter"></i></a></li>
 								<li><a href="<?php echo $gp;?>"><i class="fa fa-google-plus"></i></a></li>
+								<!-- BEGIN USER LOGIN DROPDOWN -->
+					          <li class="dropdown user">
+					            <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+					            <img alt="" src="<?php echo base_url();?>assets/img/avatar_small.png" />
+					            <span class="username"><?php echo $this->session->userdata('nama_user');?></span>
+					            <i class="icon-angle-down"></i>
+					            </a>
+					            <ul class="dropdown-menu">
+					              <!-- <li><a href="#"><i class="icon-user"></i> My Profile</a></li>
+					              <li class="divider"></li> -->
+					              <li><a href="javascript:;" id="trigger_fullscreen"><i class="icon-move"></i> Full Screen</a></li>
+					              <li><a href="<?php echo base_url();?>home/logout"><i class="icon-key"></i> Log Out</a></li>
+					            </ul>
+					          </li>
+					          <!-- END USER LOGIN DROPDOWN -->
 							</ul>
 						</div>
 					</div>
@@ -422,7 +437,7 @@
 							<!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,sed do eiusmod tempor</p> -->
 						</div>
 					</div>
-					<div class="col-sm-7">
+					<div class="col-sm-10">
 						<?php
 						foreach ($bank->result_array() as $value) {?>
 
@@ -476,5 +491,23 @@
 	<script src="<?php echo base_url();?>asset/js/price-range.js"></script>
     <script src="<?php echo base_url();?>asset/js/jquery.prettyPhoto.js"></script>
     <script src="<?php echo base_url();?>asset/js/main.js"></script>
+
+
+    <script>
+    jQuery(document).ready(function() {       
+       // initiate layout and plugins
+       App.init();
+       UIModals.init();
+       FormComponents.init();
+       TableEditable.init();
+      
+
+    });
+
+    
+
+
+  </script>
+  <!-- END JAVASCRIPTS -->  
 </body>
 </html>
