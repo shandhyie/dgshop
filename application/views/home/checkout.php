@@ -163,7 +163,7 @@
 				<table class="table table-condensed">
 					<thead>
 						<tr class="cart_menu">
-							<td class="image">Jumlah</td>
+							<!--<td class="image">Jumlah</td>-->
 							<td class="description">Nama Barang</td>
 							<td class="price">Harga</td>
 							<td class="quantity">Sub Total</td>
@@ -178,7 +178,7 @@
 		
 		<?php echo form_hidden('rowid[]', $items['rowid']); ?>
 		<tr <?php if($i&1){ echo 'class="alt"'; }?>>
-	  		<td class="td-keranjang">
+	  		<!--<td class="td-keranjang">
 			<select name="qty[]" class="input-teks">
 	  			<?php 
 				for($i=1;$i<=200;$i+=1)
@@ -195,7 +195,7 @@
 				}	
 				?>
 			</select>
-	  		</td>
+	  		</td>-->
 	  		
 	  		<td class="td-keranjang"><?php echo $items['name']; ?></td>
 	  		
@@ -208,7 +208,7 @@
 		<?php endforeach; ?>
 		
 		<tr>
-			<td class="td-keranjang" colspan=3><b>Total Belanja</b></td>
+			<td class="td-keranjang" colspan=2><b>Total Belanja</b></td>
  		 	<td class="td-keranjang" colspan=2>Rp. <?php echo $this->cart->format_number($this->cart->total()); ?></td>
 		</tr>
 						
