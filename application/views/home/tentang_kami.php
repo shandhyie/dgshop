@@ -216,7 +216,7 @@
 
 							
 							
-						</div>
+						</div><br><br>
 					</div><!--/blog-post-area-->
 
 					<div class="features_items"><!--features_items-->
