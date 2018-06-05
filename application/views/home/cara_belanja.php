@@ -97,7 +97,7 @@
 							}
 
 							?>
-							<a href="<?php echo base_url();?>"><img src="<?php echo base_url();?>images/logo/<?php echo $logo;?>" alt="Adriano MX Online Shop" /></a>
+							<a href="<?php echo base_url();?>"><img src="<?php echo base_url();?>images/logo/<?php echo $logo;?>" alt="Dg.Shop" /></a>
 						</div>
 						<div class="btn-group pull-right">
 							
@@ -187,7 +187,7 @@
 						</div><!--/category-products-->
 					
 						<div class="brands_products"><!--brands_products-->
-							<h2>Brands</h2>
+							<h2>Desainer</h2>
 							<div class="brands-name">
 								<ul class="nav nav-pills nav-stacked">
 									<?php

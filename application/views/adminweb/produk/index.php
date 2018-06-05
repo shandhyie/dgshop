@@ -47,7 +47,7 @@
 											<th>Kode Produk</th>
 											<th>Nama Produk</th>
 											<th>Harga</th>
-											<th>Stok</th>
+											<!-- <th>Stok</th> -->
 											<th>Brand</th>
 											<th>Kategori</th>
 											<th>Action</th>
@@ -64,7 +64,7 @@
 											<td><?php echo $tampil['kode_produk'];?></td>
 											<td><?php echo $tampil['nama_produk'];?></td>
 											<td><?php echo $tampil['harga'];?></td>
-											<td><?php echo $tampil['stok'];?></td>
+											<!--<td><?php echo $tampil['stok'];?></td>-->
 											<td><?php echo $tampil['nama_brand'];?></td>
 											<td><?php echo $tampil['nama_kategori'];?></td>
 											

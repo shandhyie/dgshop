@@ -97,7 +97,7 @@
 							}
 
 							?>
-							<a href="<?php echo base_url();?>"><img src="<?php echo base_url();?>images/logo/<?php echo $logo;?>" alt="Adriano MX Online Shop" /></a>
+							<a href="<?php echo base_url();?>"><img src="<?php echo base_url();?>images/logo/<?php echo $logo;?>" alt="Dg.Shop" /></a>
 						</div>
 						<div class="btn-group pull-right">
 							
@@ -379,7 +379,7 @@
 		<div class="footer-bottom">
 			<div class="container">
 				<div class="row">
-					<p class="pull-left">Copyright © 2014 Adriano MX Online Shop. All rights reserved.</p>
+					<p class="pull-left">Copyright © 2018 DgShop . All rights reserved.</p>
 					
 				</div>
 			</div>

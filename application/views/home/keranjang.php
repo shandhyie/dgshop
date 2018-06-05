@@ -98,7 +98,7 @@
 							}
 
 							?>
-							<a href="<?php echo base_url();?>"><img src="<?php echo base_url();?>images/logo/<?php echo $logo;?>" alt="Adriano MX Online Shop" /></a>
+							<a href="<?php echo base_url();?>"><img src="<?php echo base_url();?>images/logo/<?php echo $logo;?>" alt="Dg.Shop" /></a>
 						</div>
 						<div class="btn-group pull-right">
 							
@@ -178,11 +178,11 @@
 				<table class="table table-condensed">
 					<thead>
 						<tr class="cart_menu">
-							<td class="image">Jumlah</td>
-							<td class="description">Nama Barang</td>
-							<td class="price">Harga</td>
-							<td class="quantity">Sub Total</td>
-							<td class="total">Hapus</td>
+							<!--<td class="image">Jumlah</td>-->
+							<td class="description"><center>Nama Barang </center></td>
+							<td class="price"><center>Harga</center></td>
+						<!--	<td class="quantity">Sub Total</td>-->
+							<td class="total"><center>Hapus</center></td>
 							<td></td>
 						</tr>
 					</thead>
@@ -193,7 +193,7 @@
 		
 		<?php echo form_hidden('rowid[]', $items['rowid']); ?>
 		<tr <?php if($i&1){ echo 'class="alt"'; }?>>
-	  		<td class="td-keranjang">
+	  		<!--<td class="td-keranjang">
 			<select name="qty[]" class="input-teks">
 	  			<?php 
 				for($i=1;$i<=200;$i+=1)
@@ -210,12 +210,12 @@
 				}	
 				?>
 			</select>
-	  		</td>
+	  		</td>-->
 	  		
 	  		<td class="td-keranjang"><?php echo $items['name']; ?></td>
 	  		
 	  		<td class="td-keranjang">Rp. <?php echo $this->cart->format_number($items['price']); ?></td>
-	  		<td class="td-keranjang">Rp. <?php echo $this->cart->format_number($items['subtotal']); ?></td>
+	  	<!--	<td class="td-keranjang">Rp. <?php echo $this->cart->format_number($items['subtotal']); ?></td> -->
  		 	<td class="td-keranjang" align="center"><a href="<?php echo base_url(); ?>home/keranjang_hapus/<?php echo $items['rowid']; ?>"><i class="fa fa-times"></i></a></td>
 	  	</tr>
 	  	
@@ -223,8 +223,8 @@
 		<?php endforeach; ?>
 		
 		<tr>
-			<td class="td-keranjang" colspan=3><b>Total Belanja</b></td>
- 		 	<td class="td-keranjang" colspan=2>Rp. <?php echo $this->cart->format_number($this->cart->total()); ?></td>
+			<td class="td-keranjang" colspan=1><b>Total Belanja</b></td>
+ 		 	<td class="td-keranjang" colspan=2><b>Rp. <?php echo $this->cart->format_number($this->cart->total()); ?></b></td>
 		</tr>
 						
 						

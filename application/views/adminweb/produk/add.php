@@ -39,7 +39,7 @@
 									</div>
 									
 									<div class="control-group">
-												<label class="control-label">Brand</label>
+												<label class="control-label">Desainer</label>
 												<div class="controls">
 													<select id="select2_sample1" name="brand_id" class="span6 select2">
 														<option value=""></option>
@@ -75,12 +75,12 @@
 										</div>
 									</div>
 
-									<div class="control-group">
+									<!--<div class="control-group">
 										<label class="control-label">Stok</label>
 										<div class="controls">
 											<input type="text" name="stok" id="stok" class="span6 m-wrap" placeholder="Stok..." />
 										</div>
-									</div>
+									</div>-->
 									
 									<div class="control-group">
 										<label class="control-label">Deskripsi</label>

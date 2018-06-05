@@ -187,7 +187,7 @@
 						</div><!--/category-products-->
 					
 						<div class="brands_products"><!--brands_products-->
-							<h2>Desainer</h2>
+							<h2>Brands</h2>
 							<div class="brands-name">
 								<ul class="nav nav-pills nav-stacked">
 									<?php
@@ -231,7 +231,7 @@
 
 							
 							
-						</div>
+						</div><br><br>
 					</div><!--/blog-post-area-->
 
 					<div class="features_items"><!--features_items-->

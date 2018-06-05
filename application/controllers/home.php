@@ -411,24 +411,34 @@ class home extends CI_controller {
 			$jasapengiriman_id 	= $this->input->post("jasapengiriman_id");
 
 			$isi_psn ='<table style="border:1px solid #000;" border="1" cellpadding=0>';
-					$isi_psn ='<tr><td>Kode Produk</td><td>Nama Produk</td><td>Harga</td><td>Jumlah</td><td>Subtotal</td></tr>';
+					$isi_psn ='<tr><td>Kode Produk</td><td>Nama Produk</td><td>Harga</td><td>Jumlah</td></tr>';
 					foreach($this->cart->contents() as $items)
 					{
-$isi_psn = '<tr><td>'.$items["id"].'</td><td>'.$items["name"].'</td><td>Rp.'.$this->cart->format_number($items["price"]).'</td><td>'.$items["qty"].'</td><td>Rp.'.$this->cart->format_number($items["subtotal"]).'</td></tr>
+$isi_psn = '<tr><td>'.$items["id"].'</td><td>'.$items["name"].'</td><td>Rp.'.$this->cart->format_number($items["price"]).'</td><td>'.$items["qty"].'</td><td>Rp.'.$this->cart->format_number($items["Jumlah"]).'</td></tr>
 ';
 					}
 					$isi_psn = '<tr><td>Total Belanja (belum biaya kirim): </td><td colspan=4>Rp.'.$this->cart->format_number($this->cart->total()).'</td></tr>
 ';
 					$isi_psn ='</table><br>';
 					$isi_psn ='Harga di atas belum termasuk biaya kirim. Kami akan mengirimkan total yang harus anda bayar ke email anda dalam jangka waktu 1x24 jam.<br>';
+<<<<<<< HEAD
 					$isi_psn ='Salam, Dg. Shop';
+=======
+					$isi_psn ='Salam, Dg.Shop';
+>>>>>>> ee6e8ef3fee482c43785014af0a93aa0162d61a6
 
 
 					$this->load->library('email');
 					$this->email->set_mailtype('html');
+<<<<<<< HEAD
 					$this->email->from("dgshop@gmail.com", "Admin Dg. Shop");
 					$this->email->to($email);
 					$this->email->subject('Detail Pesanan/Beli Dg. Shop');
+=======
+					$this->email->from("dgshop@gmail.com", "Admin Salam, Dg.Shop");
+					$this->email->to($email);
+					$this->email->subject('Detail Pesanan/Belanja Salam, Dg.Shop');
+>>>>>>> ee6e8ef3fee482c43785014af0a93aa0162d61a6
 					$this->email->message($isi_psn);
 					$this->email->send();
 
