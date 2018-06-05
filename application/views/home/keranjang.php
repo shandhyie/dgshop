@@ -166,7 +166,7 @@
 							<!--<td class="image">Jumlah</td>-->
 							<td class="description">Nama Barang</td>
 							<td class="price">Harga</td>
-							<td class="quantity">Sub Total</td>
+							<!--<td class="quantity">Sub Total</td>-->
 							<td class="total">Hapus</td>
 							<td></td>
 						</tr>

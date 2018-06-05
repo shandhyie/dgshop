@@ -3,7 +3,7 @@
 						<!-- BEGIN EXAMPLE TABLE PORTLET-->
 						<div class="portlet box blue">
 							<div class="portlet-title">
-								<div class="caption"><i class="icon-edit"></i>Brand</div>
+								<div class="caption"><i class="icon-edit"></i>Desainer</div>
 								<div class="tools">
 									<a href="javascript:;" class="collapse"></a>
 									

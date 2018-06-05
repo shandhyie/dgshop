@@ -1468,7 +1468,7 @@ class adminweb extends CI_Controller {
 		$this->form_validation->set_rules('brand_id','Brand','required');
 		$this->form_validation->set_rules('kategori_id','Kategori','required');
 		$this->form_validation->set_rules('harga','Harga','required');
-		$this->form_validation->set_rules('stok','Stok','required');
+		//$this->form_validation->set_rules('stok','Stok','required');
 		$this->form_validation->set_rules('deskripsi','Deskripsi','required');
 
 		if ($this->form_validation->run()==FALSE) {
@@ -1487,7 +1487,7 @@ class adminweb extends CI_Controller {
 						$in_data['kode_produk'] = $this->input->post('kode_produk');
 						$in_data['nama_produk'] = $this->input->post('nama_produk');
 						$in_data['harga'] = $this->input->post('harga');
-						$in_data['stok'] = $this->input->post('stok');
+						//$in_data['stok'] = $this->input->post('stok');
 						$in_data['deskripsi'] = $this->input->post('deskripsi');
 						$in_data['kategori_id'] = $this->input->post('kategori_id');
 						$in_data['brand_id'] = $this->input->post('brand_id');
@@ -1571,7 +1571,7 @@ class adminweb extends CI_Controller {
 						$in_data['kode_produk'] = $this->input->post('kode_produk');
 						$in_data['nama_produk'] = $this->input->post('nama_produk');
 						$in_data['harga'] = $this->input->post('harga');
-						$in_data['stok'] = $this->input->post('stok');
+						//$in_data['stok'] = $this->input->post('stok');
 						$in_data['deskripsi'] = $this->input->post('deskripsi');
 						$in_data['kategori_id'] = $this->input->post('kategori_id');
 						$in_data['brand_id'] = $this->input->post('brand_id');
@@ -1616,7 +1616,7 @@ class adminweb extends CI_Controller {
 			$data['kode_produk']= $tampil['kode_produk'];
 			$data['nama_produk']= $tampil['nama_produk'];
 			$data['harga']= $tampil['harga'];
-			$data['stok']= $tampil['stok'];
+			//$data['stok']= $tampil['stok'];
 			$data['deskripsi']= $tampil['deskripsi'];
 			$data['kategori_id']= $tampil['kategori_id'];
 			$data['brand_id']= $tampil['brand_id'];
@@ -1636,7 +1636,7 @@ class adminweb extends CI_Controller {
 						$in_data['kode_produk'] = $this->input->post('kode_produk');
 						$in_data['nama_produk'] = $this->input->post('nama_produk');
 						$in_data['harga'] = $this->input->post('harga');
-						$in_data['stok'] = $this->input->post('stok');
+						//$in_data['stok'] = $this->input->post('stok');
 						$in_data['deskripsi'] = $this->input->post('deskripsi');
 						$in_data['kategori_id'] = $this->input->post('kategori_id');
 						$in_data['brand_id'] = $this->input->post('brand_id');
@@ -1723,7 +1723,7 @@ class adminweb extends CI_Controller {
 						$in_data['kode_produk'] = $this->input->post('kode_produk');
 						$in_data['nama_produk'] = $this->input->post('nama_produk');
 						$in_data['harga'] = $this->input->post('harga');
-						$in_data['stok'] = $this->input->post('stok');
+						//$in_data['stok'] = $this->input->post('stok');
 						$in_data['deskripsi'] = $this->input->post('deskripsi');
 						$in_data['kategori_id'] = $this->input->post('kategori_id');
 						$in_data['brand_id'] = $this->input->post('brand_id');
