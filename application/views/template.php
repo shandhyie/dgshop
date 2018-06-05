@@ -189,7 +189,7 @@
           <ul class="sub-menu">
              <li >
               <a href="<?php echo base_url();?>adminweb/brand">
-              Brand</a>
+              Desainer</a>
             </li>
             <li >
               <a href="<?php echo base_url();?>adminweb/kategori">
