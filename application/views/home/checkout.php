@@ -269,9 +269,6 @@ endif;
 								<input type="text" placeholder="Email Penerima" name="email">
 								<input type="text" placeholder="Alamat Penerima" name="alamat">
 								<input type="text" placeholder="No Telp" name="no_telepon">
-								<input type="text" placeholder="Propinsi" name="propinsi">
-								<input type="text" placeholder="Kota" name="kota">
-								<input type="text" placeholder="Kode Pos" name="kode_pos">
 								
 							
 							
@@ -287,14 +284,6 @@ endif;
 										<?php
 										foreach ($bank->result_array() as $value) { ?>
 											<option value="<?php echo $value['id_bank'];?>"><?php echo $value['nama_bank'];?>- <?php echo $value['no_rekening'];?></option>
-										<?php
-										}
-										?>
-									</select>
-									<select name="jasapengiriman_id">
-										<?php
-										foreach ($jasapengiriman->result_array() as $value) { ?>
-											<option value="<?php echo $value['id_jasapengiriman'];?>"><?php echo $value['nama'];?></option>
 										<?php
 										}
 										?>
