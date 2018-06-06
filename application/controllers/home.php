@@ -421,11 +421,14 @@ $isi_psn = '<tr><td>'.$items["id"].'</td><td>'.$items["name"].'</td><td>Rp.'.$th
 ';
 					$isi_psn ='</table><br>';
 					$isi_psn ='Harga di atas belum termasuk biaya kirim. Kami akan mengirimkan total yang harus anda bayar ke email anda dalam jangka waktu 1x24 jam.<br>';
+
 					$isi_psn ='Salam, Dg. Shop';
 
 					$isi_psn ='Salam, Dg.Shop';
 
 
+
+					$isi_psn ='Salam, Dg.Shop';
 
 					$this->load->library('email');
 					$this->email->set_mailtype('html');
