@@ -72,9 +72,7 @@
 						            <i class="icon-angle-down"></i>
 						            </a>
 						            <ul class="dropdown-menu">
-						              <!-- <li><a href="#"><i class="icon-user"></i> My Profile</a></li>
-						              <li class="divider"></li> -->
-						              <li><a href="javascript:;" id="trigger_fullscreen"><i class="icon-move"></i> Full Screen</a></li>
+						              <li><a href="#"><i class="icon-user"></i> My Profile</a></li>
 						              <li><a href="<?php echo base_url();?>user/logout"><i class="icon-key"></i> Log Out</a></li>
 						            </ul>
 						          </li>
@@ -240,14 +238,14 @@
 											<h2><?php echo $value['harga'];?></h2>
 											<p><?php echo $value['nama_brand'];?></p>
 											<p><?php echo $value['nama_produk'];?></p>
-											<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+											<a href="<?php echo base_url();?>home/keranjang/<?php echo $value['id_produk'];?>" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
 										</div>
 										<div class="product-overlay">
 											<div class="overlay-content">
 												<h2><?php echo $value['harga'];?></h2>
 												<p><?php echo $value['nama_brand'];?></p>
 												<p><?php echo $value['nama_produk'];?></p>
-												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+												<a href="<?php echo base_url();?>home/keranjang/<?php echo $value['id_produk'];?>" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
 											</div>
 										</div>
 								</div>
