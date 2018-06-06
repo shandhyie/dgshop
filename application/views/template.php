@@ -266,26 +266,6 @@
               </a>
             </li>
             <li>
-              <a href="<?php echo base_url();?>adminweb/seo">
-              Seo
-              </a>
-            </li>
-            <li>
-              <a href="<?php echo base_url();?>adminweb/kota">
-              Kota
-              </a>
-            </li>
-             <li>
-              <a href="<?php echo base_url();?>adminweb/bank">
-              Bank
-              </a>
-            </li>
-            <li>
-              <a href="<?php echo base_url();?>adminweb/jasapengiriman">
-              Jasa Pengiriman
-              </a>
-            </li>
-            <li>
               <a href="<?php echo base_url();?>adminweb/admin">
               Admin
               </a>

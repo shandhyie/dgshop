@@ -72,6 +72,7 @@
 						            <i class="icon-angle-down"></i>
 						            </a>
 						            <ul class="dropdown-menu">
+						              <li><a href="#"><i class="icon-user"></i> My Profile</a></li>
 						              <li><a href="<?php echo base_url();?>user/logout"><i class="icon-key"></i> Log Out</a></li>
 						            </ul>
 						          </li>

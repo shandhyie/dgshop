@@ -414,7 +414,7 @@ class home extends CI_controller {
 					$isi_psn ='<tr><td>Kode Produk</td><td>Nama Produk</td><td>Harga</td><td>Jumlah</td></tr>';
 					foreach($this->cart->contents() as $items)
 					{
-$isi_psn = '<tr><td>'.$items["id"].'</td><td>'.$items["name"].'</td><td>Rp.'.$this->cart->format_number($items["price"]).'</td><td>'.$items["qty"].'</td><td>Rp.'.$this->cart->format_number($items["Jumlah"]).'</td></tr>
+$isi_psn = '<tr><td>'.$items["id"].'</td><td>'.$items["name"].'</td><td>Rp.'.$this->cart->format_number($items["price"]).'</td><td>'.$items["qty"].'</td><td>Rp.'.$this->cart->format_number($items["subtotal"]).'</td></tr>
 ';
 					}
 					$isi_psn = '<tr><td>Total Belanja (belum biaya kirim): </td><td colspan=4>Rp.'.$this->cart->format_number($this->cart->total()).'</td></tr>

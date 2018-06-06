@@ -73,9 +73,7 @@
 						            <i class="icon-angle-down"></i>
 						            </a>
 						            <ul class="dropdown-menu">
-						              <!-- <li><a href="#"><i class="icon-user"></i> My Profile</a></li>
-						              <li class="divider"></li> -->
-						              <li><a href="javascript:;" id="trigger_fullscreen"><i class="icon-move"></i> Full Screen</a></li>
+						              <li><a href="#"><i class="icon-user"></i> My Profile</a></li>
 						              <li><a href="<?php echo base_url();?>user/logout"><i class="icon-key"></i> Log Out</a></li>
 						            </ul>
 						          </li>
@@ -230,14 +228,12 @@
 						
 					</tbody>
 				</table>
-				<input type="submit" class="btn btn-default get" value="Update Keranjang">
 				<a href="<?php echo base_url(); ?>home"><div class="btn btn-default get">Lanjut Belanja</div></a>
 				<a href="<?php echo base_url(); ?>home/checkout"><div class="btn btn-default get">Selesai Belanja</div></a>
 			</div>
 
 			<div class="register-req">
 			<ul>
-				<li>Apabila Anda mengubah jumlah (Qty), jangan lupa tekan tombol Update Keranjang Belanja</li>
 				<li>Untuk menghaspus barang pada keranjang belanja, klik tombol Hapus.</li>
 				<!-- <li>Total harga di atas belum termasuk ongkos kirim yang akan dihitung saat Selesai Belanja</li> -->
 			</ul>
