@@ -230,7 +230,7 @@
 						
 					</tbody>
 				</table>
-				<input type="submit" class="btn btn-default get" value="Update Keranjang">
+<!--				<input type="submit" class="btn btn-default get" value="Update Keranjang">-->
 				
 			</div>
 			<?php 
@@ -241,9 +241,10 @@ endif;
 
 
 			<div class="register-req">
-			<ul>
-				<li>Apabila Anda mengubah jumlah (Qty), jangan lupa tekan tombol Update Keranjang Belanja</li>
-				<li>Untuk menghaspus barang pada keranjang belanja, klik tombol Hapus.</li>
+			<ul> <b> <h1 style="font-size:110%">
+				<li>TERIMA KASIH !</li>
+				<li>Apabila Anda belanja ada sulah selesai </li>
+				<li>Jangan lupa isi data pada <span style="color:steelblue"> Data Pembeli </span> dan <span style="color:steelblue">Data Pembayaran </span></li> </b></h1>
 				<!-- <li>Total harga di atas belum termasuk ongkos kirim yang akan dihitung saat Selesai Belanja</li> -->
 			</ul>
 		</div>
