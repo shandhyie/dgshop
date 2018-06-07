@@ -441,7 +441,7 @@ $isi_psn = '<tr><td>'.$items["id"].'</td><td>'.$items["name"].'</td><td>Rp.'.$th
 			$this->home_model->InsertTransaksiHeader($kode_trans,$penerima,$email,$alamat,$no_telepon,$propinsi,$kota,$kode_pos,$bank_id,$jasapengiriman_id);
 			foreach($this->cart->contents() as $items)
 						{
-							$this->home_model->simpan_pesanan("insert into tbl_transaksi_detail (kode_transaksi,kode_produk,nama_produk,harga,jumlah) values('".$kode_trans."','".$items['id']."','".$items['name']."','".$items['price']."','".$items['qty']."')");
+							$this->home_model->simpan_pesanan("insert into tbl_transaksi_detail (kode_transaksi,kode_produk,nama_produk,harga) values('".$kode_trans."','".$items['id']."','".$items['name']."','".$items['price']."')");
 							// $this->home_model->update_dibeli($items['id'],$items['qty']);
 						}
 						$this->cart->destroy();

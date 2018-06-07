@@ -2208,7 +2208,7 @@ class adminweb extends CI_Controller {
 			$data['data_header'] 	= $this->admin_model->GetTransaksiheader($id);  
 			$data['data_detail']	= $this->admin_model->GetDetailTransaksi($kode_transaksi);
 			$data['data_total']		= $this->admin_model->GetDetailTotal($kode_transaksi);
-
+			echo json_encode($this->admin_model->GetDetailTransaksi($kode_transaksi)->result_array());
 			$this->template->load('template','adminweb/transaksi/detail',$data);
 
 		}

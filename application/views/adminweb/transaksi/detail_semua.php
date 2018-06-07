@@ -105,7 +105,7 @@
 											<th>Kode Produk</th>
 											<th>Nama Produk</th>
 											<th>Harga</th>
-											<th>Jumlah</th>
+											<th>Tanggal</th>
 											
 											
 										</tr>
@@ -113,6 +113,7 @@
 									<tbody>
 										<?php
 										$no=1;
+
 										if ($data_detail->num_rows()>0) {
 											foreach ($data_detail->result_array() as $tampil) { ?>
 										<tr >
