@@ -106,10 +106,10 @@
 					<div class="col-sm-8">
 						<div class="shop-menu pull-right">
 							<ul class="nav navbar-nav">
-								<li><a href="<?php echo base_url();?>home/tentang_kami"> Tentang Kami</a></li>
-								<li><a href="<?php echo base_url();?>home/cara_belanja"> Cara Belanja</a></li>
-								<li><a href="<?php echo base_url();?>home/hubungi_kami"> Hubungi Kami</a></li>
-								<li><a href="<?php echo base_url();?>home/keranjang"> Keranjang Belanja</a></li>
+								<li><a href="<?php echo base_url();?>home/tentang_kami" ><b>Tentang Kami</b></a></li>
+								<li><a href="<?php echo base_url();?>home/cara_belanja"><b>Cara Belanja</a></b></li>
+								<li><a href="<?php echo base_url();?>home/hubungi_kami"><b>Hubungi Kami</a></b></li>
+								<li><a href="<?php echo base_url();?>home/keranjang"><b>Keranjang Belanja</a></b></li>
 							</ul>
 						</div>
 					</div>
