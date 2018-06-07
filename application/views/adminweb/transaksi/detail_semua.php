@@ -151,7 +151,7 @@
 								}
 								?>
 
-								Total Transaksi =  <?php echo $total;?>
+								<b>Total Transaksi =  <?php echo $total;?></b>
 							</div>
 						</div>
 						<a href="<?php echo base_url();?>adminweb/semua_transaksi" class="btn">Kembali</a>

@@ -134,7 +134,7 @@
 								<li><a href="<?php echo base_url();?>" class="active">Home</a></li>
 								
 								<li class="dropdown"><a href="#">Category<i class="fa fa-angle-down"></i></a>
-                                    <ul role="menu" class="sup-menu">
+                                    <ul role="menu" class="sub-menu">
                                     	<?php
                                     	foreach ($kategori->result_array() as $value) { ?>
                                     		

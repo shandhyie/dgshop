@@ -41,7 +41,7 @@
 										if ($data_transaksi->num_rows()>0) {
 											foreach ($data_transaksi->result_array() as $tampil) { ?>
 										<tr >
-											<td><?php echo $no;?></td>
+											<td><?php echo $no;?></td><center>
 											<td><?php echo $tampil['kode_transaksi'];?></td>
 											<td><?php echo $tampil['penerima'];?></td>
 											<td><?php echo $tampil['email'];?></td>
@@ -52,7 +52,7 @@
 											<td><?php echo $tampil['kode_pos'];?></td>
 											<td><?php echo $tampil['nama_bank'];?></td>
 											<td><?php echo $tampil['nama'];?></td>
-											
+											</center>
 											<td>
 											<a class="btn blue" href="<?php echo base_url();?>adminweb/semua_transaksi_detail/<?php echo $tampil['id_transaksi_header'];?>/<?php echo $tampil['kode_transaksi'];?>"><i class="icon-search"></i> Detail</a>
 

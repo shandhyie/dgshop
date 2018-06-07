@@ -99,14 +99,14 @@
 								</div>
 								<table class="table table-striped table-hover table-bordered" >
 									<thead>
-										<tr>
+										<tr> <center>
 											<th>No</th>
 											<th>Kode Transaksi</th>
 											<th>Kode Produk</th>
 											<th>Nama Produk</th>
 											<th>Harga</th>
-											<th>Jumlah</th>
-											
+											<th>Tanggal</th>
+											</center>
 											
 										</tr>
 									</thead>
@@ -150,7 +150,7 @@
 								}
 								?>
 
-								Total Transaksi =  <?php echo $total;?>
+								<b>Total Transaksi =  <?php echo $total;?></b>
 							</div>
 						</div>
 						<a href="<?php echo base_url();?>adminweb/transaksi" class="btn">Kembali</a>
