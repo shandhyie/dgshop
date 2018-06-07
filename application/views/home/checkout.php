@@ -243,8 +243,8 @@ endif;
 			<div class="register-req">
 			<ul> <b> <h1 style="font-size:110%">
 				<li>TERIMA KASIH !</li>
-				<li>Apabila Anda belanja ada sulah selesai </li>
-				<li>Jangan lupa isi data pada <span style="color:steelblue"> Data Pembeli </span> dan <span style="color:steelblue">Data Pembayaran </span></li> </b></h1>
+				<li>Apabila Anda telah selesai memilih </li>
+				<li>Silahkan isi data pada <span style="color:steelblue"> Data Pembeli </span> dan <span style="color:steelblue">Data Pembayaran </span></li> </b></h1>
 				<!-- <li>Total harga di atas belum termasuk ongkos kirim yang akan dihitung saat Selesai Belanja</li> -->
 			</ul>
 		</div>
@@ -279,7 +279,7 @@ endif;
 							
 						</div>
 					</div>
-					<div class="col-sm-5 clearfix">
+					<div class="col-sm-6 clearfix">
 						<div class="bill-to">
 							<p>Metode Pembayaran</p>
 							<div class="form-two">
@@ -292,14 +292,14 @@ endif;
 										}
 										?>
 									</select>
-									<select name="jasapengiriman_id">
+								<!--	<select name="jasapengiriman_id">
 										<?php
 										foreach ($jasapengiriman->result_array() as $value) { ?>
 											<option value="<?php echo $value['id_jasapengiriman'];?>"><?php echo $value['nama'];?></option>
 										<?php
 										}
 										?>
-									</select>
+									</select>-->
 								
 								<button class="btn btn-primary" type="submit">Kirim</button> 
 								<?php echo form_close();?>
