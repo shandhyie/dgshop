@@ -282,7 +282,7 @@ endif;
 					<div class="col-sm-6 clearfix">
 						<div class="bill-to">
 							<p>Metode Pembayaran</p>
-							<div class="form-two">
+								<div class="form-two">
 								
 									<select name="bank_id">
 										<?php
