@@ -268,15 +268,8 @@ endif;
 							<?php echo form_open('home/checkout_invoice');?>
 								<input type="text" placeholder="Nama Penerima" name="penerima">
 								<input type="text" placeholder="Email Penerima" name="email">
-								<input type="text" placeholder="Alamat Penerima" name="alamat">
 								<input type="text" placeholder="No Telp" name="no_telepon">
-								<input type="text" placeholder="Propinsi" name="propinsi">
-								<input type="text" placeholder="Kota" name="kota">
-								<input type="text" placeholder="Kode Pos" name="kode_pos">
 								
-							
-							
-							
 						</div>
 					</div>
 					<div class="col-sm-6 clearfix">

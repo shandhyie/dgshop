@@ -344,9 +344,8 @@ class admin_model extends CI_Model {
 	//Awal Transaksi
 
 	function GetTransaksi() {
-		return $this->db->query("select a.*,b.*,c.* from tbl_transaksi_header a
+		return $this->db->query("select a.*,b.* from tbl_transaksi_header a
 		join tbl_bank b on a.bank_id=b.id_bank
-		join  tbl_jasapengiriman c on a.jasapengiriman_id=c.id_jasapengiriman
 		where a.status='0' order by a.id_transaksi_header asc  ");
 	}
 
@@ -355,9 +354,8 @@ class admin_model extends CI_Model {
 	}
 
 	function GetTransaksiheader($id) {
-		return $this->db->query("select a.*,b.*,c.* from tbl_transaksi_header a
+		return $this->db->query("select a.*,b.* from tbl_transaksi_header a
 		join tbl_bank b on a.bank_id=b.id_bank
-		join  tbl_jasapengiriman c on a.jasapengiriman_id=c.id_jasapengiriman
 		where a.id_transaksi_header='$id' ");
 	}
 
@@ -371,9 +369,8 @@ class admin_model extends CI_Model {
 
 	function GetTransaksiSudah() {
 
-		return $this->db->query("select a.*,b.*,c.* from tbl_transaksi_header a
+		return $this->db->query("select a.*,b.* from tbl_transaksi_header a
 		join tbl_bank b on a.bank_id=b.id_bank
-		join  tbl_jasapengiriman c on a.jasapengiriman_id=c.id_jasapengiriman
 		where a.status='1' order by a.id_transaksi_header asc  ");
 
 	}

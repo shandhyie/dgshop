@@ -24,13 +24,8 @@
 											<th>Kode Transaksi</th>
 											<th>Nama Penerima</th>
 											<th>Email</th>
-											<th>Alamat</th>
 											<th>No Telp</th>
-											<th>Propinsi</th>
-											<th>Kota</th>
-											<th>Kode Pos</th>
 											<th>Bank</th>
-											<th>Jasa Pengiriman</th>
 											<th>Aksi</th>
 											
 										</tr>
@@ -45,13 +40,8 @@
 											<td><?php echo $tampil['kode_transaksi'];?></td>
 											<td><?php echo $tampil['penerima'];?></td>
 											<td><?php echo $tampil['email'];?></td>
-											<td><?php echo $tampil['alamat'];?></td>
 											<td><?php echo $tampil['no_telepon'];?></td>
-											<td><?php echo $tampil['propinsi'];?></td>
-											<td><?php echo $tampil['kota'];?></td>
-											<td><?php echo $tampil['kode_pos'];?></td>
 											<td><?php echo $tampil['nama_bank'];?></td>
-											<td><?php echo $tampil['nama'];?></td>
 											</center>
 											<td>
 											<a class="btn blue" href="<?php echo base_url();?>adminweb/semua_transaksi_detail/<?php echo $tampil['id_transaksi_header'];?>/<?php echo $tampil['kode_transaksi'];?>"><i class="icon-search"></i> Detail</a>

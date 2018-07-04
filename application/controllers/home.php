@@ -20,7 +20,6 @@ class home extends CI_controller {
 		$data['produk']			= $this->home_model->GetProduk();
 		$data['random']			= $this->home_model->GetRandomProduk();
 		$data['random_active']	= $this->home_model->GetRandomActiveProduk();
-		$data['jasapengiriman']	= $this->home_model->GetJasaPengiriman();
 
 		$this->load->view('home/index',$data);
 	}
@@ -35,7 +34,6 @@ class home extends CI_controller {
 		$data['kategori'] 		= $this->home_model->GetKategori(); 
 		$data['tentangkami'] 	= $this->home_model->GetTentangKami();
 		$data['produk']			= $this->home_model->GetProduk();
-		$data['jasapengiriman']	= $this->home_model->GetJasaPengiriman();
 		
 		$this->load->view('home/tentang_kami',$data);
 	}
@@ -49,7 +47,6 @@ class home extends CI_controller {
 		$data['brand'] 			= $this->home_model->GetBrand(); 
 		$data['kategori'] 		= $this->home_model->GetKategori(); 
 		$data['carabelanja'] 	= $this->home_model->GetCaraBelanja();
-		$data['jasapengiriman']	= $this->home_model->GetJasaPengiriman();
 		
 		
 		$this->load->view('home/cara_belanja',$data);
@@ -92,7 +89,6 @@ class home extends CI_controller {
 		$data['brand'] 			= $this->home_model->GetBrand(); 
 		$data['kategori'] 		= $this->home_model->GetKategori(); 
 		$data['nama_kategori']  = $this->home_model->GetNamaKategoriId($id_kategori);
-		$data['jasapengiriman']	= $this->home_model->GetJasaPengiriman();
 
 			$page=$this->uri->segment(4);
 			$limit=12;
@@ -157,8 +153,6 @@ class home extends CI_controller {
 		$data['brand'] 			= $this->home_model->GetBrand(); 
 		$data['kategori'] 		= $this->home_model->GetKategori(); 
 		$data['nama_brand']  = $this->home_model->GetNamaBrandId($id_brand);
-		$data['jasapengiriman']	= $this->home_model->GetJasaPengiriman();
-
 			$page=$this->uri->segment(4);
 			$limit=12;
 			if(!$page):
@@ -227,7 +221,6 @@ class home extends CI_controller {
 			$data['bank'] 			= $this->home_model->GetBank(); 
 			$data['brand'] 			= $this->home_model->GetBrand(); 
 			$data['kategori'] 		= $this->home_model->GetKategori(); 
-			$data['jasapengiriman']	= $this->home_model->GetJasaPengiriman();
 			$data['produk_cari']	= $this->home_model->GetProdukCari($cari);
 
 			$this->load->view('home/cari',$data);
@@ -245,7 +238,6 @@ class home extends CI_controller {
 		$data['bank'] 			= $this->home_model->GetBank(); 
 		$data['brand'] 			= $this->home_model->GetBrand(); 
 		$data['kategori'] 		= $this->home_model->GetKategori(); 
-		$data['jasapengiriman']	= $this->home_model->GetJasaPengiriman();
 		$data['random']			= $this->home_model->GetRandomProduk();
 		$data['random_active']	= $this->home_model->GetRandomActiveProduk();
 
@@ -327,7 +319,6 @@ class home extends CI_controller {
 		$data['seo'] 			= $this->home_model->GetSeo(); 
 		$data['bank'] 			= $this->home_model->GetBank(); 
 		$data['kategori'] 		= $this->home_model->GetKategori(); 
-		$data['jasapengiriman']	= $this->home_model->GetJasaPengiriman();
 
 		$this->load->view('home/checkout',$data);
 
@@ -361,14 +352,8 @@ class home extends CI_controller {
 
 		$this->form_validation->set_rules('penerima','Nama Penerima','required');
 		$this->form_validation->set_rules('email','Email','required');
-		$this->form_validation->set_rules('alamat','Alamat','required');
 		$this->form_validation->set_rules('no_telepon','No Telp','required');
-		$this->form_validation->set_rules('propinsi','Propinsi','required');
-		$this->form_validation->set_rules('kota','Kota','required');
-		$this->form_validation->set_rules('kode_pos','Kode Pos','required');
 		$this->form_validation->set_rules('bank_id','Bank','required');
-		$this->form_validation->set_rules('jasapengiriman_id','Jasa Pengiriman','required');
-
 		if ($this->form_validation->run()==FALSE) {
 
 				$data['logo'] 			= $this->home_model->GetLogo();
@@ -377,7 +362,6 @@ class home extends CI_controller {
 				$data['seo'] 			= $this->home_model->GetSeo(); 
 				$data['bank'] 			= $this->home_model->GetBank(); 
 				$data['kategori'] 		= $this->home_model->GetKategori(); 
-				$data['jasapengiriman']	= $this->home_model->GetJasaPengiriman();
 
 			$this->load->view('home/checkout',$data);
 
@@ -402,13 +386,8 @@ class home extends CI_controller {
 
 			$penerima 			= $this->input->post("penerima");
 			$email 				= $this->input->post("email");
-			$alamat 			= $this->input->post("alamat");
 			$no_telepon 		= $this->input->post("no_telepon");
-			$propinsi 			= $this->input->post("propinsi");
-			$kota 				= $this->input->post("kota");
-			$kode_pos 			= $this->input->post("kode_pos");
 			$bank_id 			= $this->input->post("bank_id");
-			$jasapengiriman_id 	= $this->input->post("jasapengiriman_id");
 
 			$isi_psn ='<table style="border:1px solid #000;" border="1" cellpadding=0>';
 					$isi_psn ='<tr><td>Kode Produk</td><td>Nama Produk</td><td>Harga</td><td>Jumlah</td></tr>';
@@ -438,7 +417,7 @@ $isi_psn = '<tr><td>'.$items["id"].'</td><td>'.$items["name"].'</td><td>Rp.'.$th
 					$this->email->message($isi_psn);
 					$this->email->send();
 
-			$this->home_model->InsertTransaksiHeader($kode_trans,$penerima,$email,$alamat,$no_telepon,$propinsi,$kota,$kode_pos,$bank_id,$jasapengiriman_id);
+			$this->home_model->InsertTransaksiHeader($kode_trans,$penerima,$email,$no_telepon,$bank_id);
 			foreach($this->cart->contents() as $items)
 						{
 							$this->home_model->simpan_pesanan("insert into tbl_transaksi_detail (kode_transaksi,kode_produk,nama_produk,harga) values('".$kode_trans."','".$items['id']."','".$items['name']."','".$items['price']."')");

@@ -104,7 +104,7 @@ class home_model extends CI_Model {
 		$q = $this->db->query($datainput);
 	}
 
-	function InsertTransaksiHeader($kode_trans,$penerima,$email,$alamat,$no_telepon,$propinsi,$kota,$kode_pos,$bank_id,$jasapengiriman_id) {
-		return $this->db->query("insert into tbl_transaksi_header values('','$kode_trans','$penerima','$email','$alamat','$no_telepon','$propinsi','$kota','$kode_pos','$bank_id','$jasapengiriman_id','')");
+	function InsertTransaksiHeader($kode_trans,$penerima,$email,$no_telepon,$bank_id) {
+		return $this->db->query("insert into tbl_transaksi_header values('','$kode_trans','$penerima','$email','$no_telepon','$bank_id','')");
 	}
 }

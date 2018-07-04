@@ -24,13 +24,8 @@
 											<th>Kode Transaksi</th>
 											<th>Nama Penerima</th>
 											<th>Email</th>
-											<th>Alamat</th>
 											<th>No Telp</th>
-											<th>Propinsi</th>
-											<th>Kota</th>
-											<th>Kode Pos</th>
 											<th>Bank</th>
-											<th>Jasa Pengiriman</th>
 											
 											
 										</tr>
@@ -45,13 +40,8 @@
 											<td><?php echo $tampil['kode_transaksi'];?></td>
 											<td><?php echo $tampil['penerima'];?></td>
 											<td><?php echo $tampil['email'];?></td>
-											<td><?php echo $tampil['alamat'];?></td>
 											<td><?php echo $tampil['no_telepon'];?></td>
-											<td><?php echo $tampil['propinsi'];?></td>
-											<td><?php echo $tampil['kota'];?></td>
-											<td><?php echo $tampil['kode_pos'];?></td>
 											<td><?php echo $tampil['nama_bank'];?></td>
-											<td><?php echo $tampil['nama'];?></td>
 											
 											
 										</tr>
