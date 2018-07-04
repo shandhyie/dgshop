@@ -82,7 +82,7 @@
 							}
 
 							?>
-							<a href="<?php echo base_url();?>"><img src="<?php echo base_url();?>images/logo/<?php echo $logo;?>" alt="Adriano MX Online Shop" /></a>
+							<a href="<?php echo base_url();?>"><img src="<?php echo base_url();?>images/logo/<?php echo $logo;?>" alt="Dg. Shop" /></a>
 						</div>
 						<div class="btn-group pull-right">
 							

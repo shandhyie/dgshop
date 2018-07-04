@@ -7,19 +7,18 @@ class user_model extends CI_Model {
 		$cek['username'] = mysql_real_escape_string($data['username']);
 		$cek['password'] = md5(mysql_real_escape_string($data['password']));
 
-		$ceklogin = $this->db->get_where('tbl_admin',$cek);
+		$ceklogin = $this->db->get_where('tbl_users',$cek);
 
 		if (count($ceklogin->result())>0) {
 
 			foreach ($ceklogin->result() as $value) {
 				$sess_data['logged_in'] 	= 'LoginOke';
-				$sess_data['id_admin']  	= $value->id_admin;
-				$sess_data['nama_admin']  	= $value->nama_admin;
+				$sess_data['id_user']  		= $value->id_user;
+				$sess_data['nama_user']  	= $value->nama_user;
 				$sess_data['username']  	= $value->username;
 				$sess_data['password']  	= $value->password;
 				$sess_data['email']  		= $value->email;
 				$sess_data['phone']  		= $value->phone;
-				$sess_data['hak_akses']  	= $value->hak_akses;
 
 				$this->session->set_userdata($sess_data);
 

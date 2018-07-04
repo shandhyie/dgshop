@@ -77,9 +77,8 @@
                 <button type="submit" class="btn green">
                 Login <i class="m-icon-swapright m-icon-white"></i>
                 </button>
-                <button type="" href="user_register.php" class="btn blue pull-right">
-                Sign Up <i class="m-icon-swapright m-icon-white"></i>
-                </button>  
+                <a type="" href="user_register.php" class="btn blue pull-right">Sign Up <i class="m-icon-swapright m-icon-white"></i>
+                </a> 
             </div>
             <p class="text-center">Login with your social media account</p>
             <div class="text-center social-btn">
