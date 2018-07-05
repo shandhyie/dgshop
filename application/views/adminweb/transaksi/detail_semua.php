@@ -111,7 +111,7 @@
 											<td><?php echo $tampil['kode_transaksi'];?></td>
 											<td><?php echo $tampil['kode_produk'];?></td>
 											<td><?php echo $tampil['nama_produk'];?></td>
-											<td><?php echo $tampil['harga'];?></td>
+											<td><?php echo $tampil['harga'];?></td>							
 											<td><?php echo $tampil['tanggal'];?></td>
 											
 											
