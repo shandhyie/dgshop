@@ -14,7 +14,7 @@
                   <div class="row-fluid">
                     <div class="alert">
                       <p>Hallo! Selamat Datang,</p>
-                      <p>Anda Berada Di Area admin untuk mengelola website Adriano
+                      <p>Anda Berada Di Area admin untuk mengelola website DgShop
                       gunakan menu yang berada disamping kiri untuk mengelola website.
                       Hubungi pihak admin jika ada beberapa yang kurang dimengerti</p>
 
