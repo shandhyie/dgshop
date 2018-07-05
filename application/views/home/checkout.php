@@ -285,14 +285,6 @@ endif;
 										}
 										?>
 									</select>
-								<!--	<select name="jasapengiriman_id">
-										<?php
-										foreach ($jasapengiriman->result_array() as $value) { ?>
-											<option value="<?php echo $value['id_jasapengiriman'];?>"><?php echo $value['nama'];?></option>
-										<?php
-										}
-										?>
-									</select>-->
 								
 								<button class="btn btn-primary" type="submit">Kirim</button> 
 								<?php echo form_close();?>

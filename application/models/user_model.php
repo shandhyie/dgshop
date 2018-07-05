@@ -5,7 +5,7 @@ class user_model extends CI_Model {
 	function CekUserLogin($data) {
 
 		$cek['username'] = mysql_real_escape_string($data['username']);
-		$cek['password'] = md5(mysql_real_escape_string($data['password']));
+		$cek['password'] = mysql_real_escape_string($data['password']);
 
 		$ceklogin = $this->db->get_where('tbl_users',$cek);
 
@@ -23,11 +23,11 @@ class user_model extends CI_Model {
 				$this->session->set_userdata($sess_data);
 
 			}
-			redirect("");
+			redirect('');
 		}
 		else {
 			$this->session->set_flashdata("error","Username atau Password Anda Salah!");
-			redirect('');
+			redirect('user/login');
 		}
 
 	}

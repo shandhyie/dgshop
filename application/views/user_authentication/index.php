@@ -27,12 +27,7 @@
 <body class="login">
 
     <div class="logo">
-        <?php foreach ($logo->result_array() as $value) {
-            $logo = $value['gambar'];
-        }
-
-        ?>
-        <img src="<?php echo base_url();?>images/logo/<?php echo $logo ;?>" alt="" /> 
+       
     </div>
     <div class="content">
 
@@ -50,7 +45,7 @@
                 <?php } ?>
 
 
-        <?php echo form_open('user/login','class="form-vertical"'); ?>
+        <?php echo form_open('user_authentication/index','class="form-vertical"'); ?>
            
             <div id="box_message" class="hide"></div>
             <div class="control-group">
@@ -82,10 +77,33 @@
             </div>
             <p class="text-center">Login with your social media account</p>
             <div class="text-center social-btn">
-                
-                <a href="#" class="btn btn-primary"><img src="<?php echo base_url();?>assets/img/social/fbicon.png"/></a>
-                <a href="#" class="btn btn-primary"><img src="<?php echo base_url();?>assets/img/social/gicon.png"/></a>
-            </div>
+            <?php
+                if(!empty($authURL)) {
+                    echo '<a href="'.$authURL.'" class="btn btn-primary"><i class="fa fa-facebook"></i>&nbsp; Facebook</a>
+            <a href="#" class="btn btn-danger"><i class="fa fa-google"></i>&nbsp; Google</a>';
+                }else{
+                ?>
+                <div class="wrapper">
+                    <h1>Facebook Profile Details </h1>
+                    <div class="welcome_txt">Welcome <b><?php echo $userData['first_name']; ?></b></div>
+                    <div class="fb_box">
+                        <div style="position: relative;">
+                            <img src="<?php echo $userData['cover']; ?>" />
+                            <img style="position: absolute; top: 90%; left: 45%;" src="<?php echo $userData['picture']; ?>"/>
+                        </div>
+                        <p><b>Facebook ID : </b><?php echo $userData['oauth_uid']; ?></p>
+                        <p><b>Name : </b><?php echo $userData['first_name'].' '.$userData['last_name']; ?></p>
+                        <p><b>Email : </b><?php echo $userData['email']; ?></p>
+                        <p><b>Gender : </b><?php echo $userData['gender']; ?></p>
+                        <p><b>Locale : </b><?php echo $userData['locale']; ?></p>
+                        <p><b>You are login with : </b>Facebook</p>
+                        <p><b>Profile Link : </b><a href="<?php echo $userData['link']; ?>" target="_blank">Click to visit Facebook page</a></p>
+                        <p><b>Logout from <a href="<?php echo $logoutURL; ?>">Facebook</a></b></p>
+                    </div>
+                </div>
+                <?php } ?>
+            
+        </div>
          
         <?php echo form_close(); ?>
        
@@ -98,4 +116,4 @@
    
 </body>
 <!-- END BODY -->
-</html>
+</html>                           

@@ -68,7 +68,7 @@
 						          <li>
 						            <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
 						            <img alt="" src="<?php echo base_url();?>assets/img/avatar_small.png" />
-						            <span class="username"><?php echo $this->session->userdata('nama_admin');?></span>
+						            <span class="username"><?php echo $this->session->userdata('nama_user');?></span>
 						            <i class="icon-angle-down"></i>
 						            </a>
 						            <ul class="dropdown-menu">
@@ -191,8 +191,8 @@
 									<div class="col-sm-6">
 										<h1><span>Dg.</span>-Shop</h1>
 										<h2><?php echo $value['tittle'];?></h2>
-										<p><?php echo strip_tags(substr($value['description'],0,200));?></p>
-										<a href="<?php echo base_url();?>home/detail_slider/<?php echo $value['id_slider'];?>" class="btn btn-default get"> Read More</a>
+										<p><?php echo strip_tags(substr($value['description'],0,400));?></p>
+										<!--<a href="<?php echo base_url();?>home/detail_slider/<?php echo $value['id_slider'];?>" class="btn btn-default get"> Read More</a>-->
 									</div>
 									<div class="col-sm-6">
 										<img src="<?php echo base_url();?>images/slider/<?php echo $value['gambar'];?>" class="girl img-responsive" alt="<?php echo $value['tittle'];?>" />
@@ -207,8 +207,8 @@
 									<div class="col-sm-6">
 										<h1><span>Dg.</span>-Shop</h1>
 										<h2><?php echo $value['tittle'];?></h2>
-										<p><?php echo strip_tags(substr($value['description'],0,200));?></p>
-										<a href="<?php echo base_url();?>home/detail_slider/<?php echo $value['id_slider'];?>" class="btn btn-default get"> Read More</a>
+										<p><?php echo strip_tags(substr($value['description'],0,400));?></p>
+										<!--<a href="<?php echo base_url();?>home/detail_slider/<?php echo $value['id_slider'];?>" class="btn btn-default get"> Read More</a>-->
 									</div>
 									<div class="col-sm-6">
 										<img src="<?php echo base_url();?>images/slider/<?php echo $value['gambar'];?>" class="girl img-responsive" alt="<?php echo $value['tittle'];?>" />
