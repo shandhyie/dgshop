@@ -224,6 +224,7 @@
 						if ($produk_kategori->num_rows()>0) {
 
 							foreach ($produk_kategori->result_array() as $value) { 
+								// echo json_encode($value);
 							$no;
 							?>
 						<div class="col-sm-4">

@@ -1491,6 +1491,8 @@ class adminweb extends CI_Controller {
 						$in_data['deskripsi'] = $this->input->post('deskripsi');
 						$in_data['kategori_id'] = $this->input->post('kategori_id');
 						$in_data['brand_id'] = $this->input->post('brand_id');
+						$in_data['status'] = 1;
+
 						$this->db->insert("tbl_produk",$in_data);
 
 					$this->session->set_flashdata('berhasil','Produk Berhasil Disimpan');
@@ -1575,6 +1577,7 @@ class adminweb extends CI_Controller {
 						$in_data['deskripsi'] = $this->input->post('deskripsi');
 						$in_data['kategori_id'] = $this->input->post('kategori_id');
 						$in_data['brand_id'] = $this->input->post('brand_id');
+						$in_data['status'] = 1;
 						$in_data['gambar'] = $data['file_name'];
 						
 						

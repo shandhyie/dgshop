@@ -346,17 +346,21 @@ class admin_model extends CI_Model {
 	function GetTransaksi() {
 		return $this->db->query("select a.*,b.* from tbl_transaksi_header a
 		join tbl_bank b on a.bank_id=b.id_bank
-		where a.status='0' order by a.id_transaksi_header asc  ");
+		where a.status='0' order by a.id_transaksi_header desc  ");
 	}
 
 	function UpdateTransaksiHeader($id) {
+		$data_transaksi_header = $this->db->query("select * from tbl_transaksi_header where id_transaksi_header=$id")->result()[0];
+		$data_transaksi_detail = $this->db->query("select * from tbl_transaksi_detail where kode_transaksi='".$data_transaksi_header->kode_transaksi."'")->result()[0];
+		$this->db->query("update tbl_produk set status=2 where kode_produk='".$data_transaksi_detail->kode_produk."'");
+
 		return $this->db->query("update tbl_transaksi_header set status='1' where id_transaksi_header='$id'  ");
 	}
 
 	function GetTransaksiheader($id) {
 		return $this->db->query("select a.*,b.* from tbl_transaksi_header a
 		join tbl_bank b on a.bank_id=b.id_bank
-		where a.id_transaksi_header='$id' ");
+		where a.id_transaksi_header='$id' order by a.id_transaksi_header desc");
 	}
 
 	function GetDetailTransaksi($kode_transaksi) {
@@ -371,7 +375,7 @@ class admin_model extends CI_Model {
 
 		return $this->db->query("select a.*,b.* from tbl_transaksi_header a
 		join tbl_bank b on a.bank_id=b.id_bank
-		where a.status='1' order by a.id_transaksi_header asc  ");
+		where a.status='1' order by a.id_transaksi_header desc  ");
 
 	}
 

@@ -35,7 +35,9 @@ class home_model extends CI_Model {
 	}
 
 	function GetProduk() {
-		return $this->db->query("select a.*,b.*,c.* from tbl_produk a join tbl_brand b on a.brand_id=b.id_brand join tbl_kategori c on a.kategori_id=c.id_kategori order by id_produk desc limit 0,6 ");
+		//yg ditampilkan itu yg statusnya 1
+		return $this->db->query("select a.*,b.*,c.* from tbl_produk a join tbl_brand b on a.brand_id=b.id_brand join tbl_kategori c on a.kategori_id=c.id_kategori where a.status=1 order by id_produk desc
+limit 0,6");
 	}
 
 	function GetRandomProduk() {
@@ -63,7 +65,7 @@ class home_model extends CI_Model {
 	}
 
 	function GetProdukKategori($id_kategori) {
-		return $this->db->query("select a.*,b.* from tbl_produk a join tbl_kategori b on a.kategori_id=b.id_kategori  where a.kategori_id='$id_kategori' order by a.id_produk desc");
+		return $this->db->query("select a.*,b.* from tbl_produk a join tbl_kategori b on a.kategori_id=b.id_kategori  where a.kategori_id='$id_kategori' and a.status=1 order by a.id_produk desc");
 	}
 
 	function GetNamaKategoriId($id_kategori) {
