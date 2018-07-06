@@ -136,7 +136,7 @@ class home extends CI_controller {
 			$this->pagination->initialize($config);
 			$data["paginator"] =$this->pagination->create_links();
 			
-			$data['produk_kategori'] = $this->db->query("select a.*,b.* from tbl_produk a join tbl_kategori b on a.kategori_id=b.id_kategori  where a.kategori_id='$id_kategori' order by a.id_produk desc 
+			$data['produk_kategori'] = $this->db->query("select a.*,b.* from tbl_produk a join tbl_kategori b on a.kategori_id=b.id_kategori  where a.kategori_id='$id_kategori' and a.status=1 order by a.id_produk desc 
 			LIMIT ".$offset.",".$limit."");
 
 		$this->load->view('home/kategori',$data);
@@ -199,7 +199,7 @@ class home extends CI_controller {
 			$this->pagination->initialize($config);
 			$data["paginator"] =$this->pagination->create_links();
 			
-			$data['produk_brand'] = $this->db->query("select a.*,b.* from tbl_produk a join tbl_brand b on a.brand_id=b.id_brand where a.brand_id='$id_brand' order by a.id_produk desc 
+			$data['produk_brand'] = $this->db->query("select a.*,b.* from tbl_produk a join tbl_brand b on a.brand_id=b.id_brand where a.brand_id='$id_brand' and a.status=1 order by a.id_produk desc 
 			LIMIT ".$offset.",".$limit."");
 
 		$this->load->view('home/brand',$data);
