@@ -266,9 +266,9 @@ endif;
 						<div class="shopper-info">
 							<p>Data Pembeli</p>
 							<?php echo form_open('home/checkout_invoice');?>
-								<input type="text" placeholder="Nama Penerima" name="penerima">
-								<input type="text" placeholder="Email Penerima" name="email">
-								<input type="text" placeholder="No Telp" name="no_telepon">
+								<input type="text" id="nama_user" name="penerima" value="<?php echo $this->session->userdata('nama_user');?>">
+								<input type="text" name="email" value="<?php echo $this->session->userdata('email');?>">
+								<input type="text"  name="no_telepon" value="<?php echo $this->session->userdata('phone');?>">
 								
 						</div>
 					</div>
